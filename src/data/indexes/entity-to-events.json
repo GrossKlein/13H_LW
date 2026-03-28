@@ -1,0 +1,296 @@
+{
+  "entity-0003": [
+    "event-0001",
+    "event-0005",
+    "event-0021",
+    "event-0025",
+    "event-0039",
+    "event-0162"
+  ],
+  "entity-0012": [
+    "event-0002"
+  ],
+  "entity-0133": [
+    "event-0002",
+    "event-0003",
+    "event-0004",
+    "event-0009",
+    "event-0011",
+    "event-0014",
+    "event-0023",
+    "event-0025",
+    "event-0028",
+    "event-0029",
+    "event-0031",
+    "event-0033",
+    "event-0034",
+    "event-0035",
+    "event-0037",
+    "event-0038",
+    "event-0053",
+    "event-0059",
+    "event-0063",
+    "event-0085",
+    "event-0086",
+    "event-0100",
+    "event-0103",
+    "event-0105",
+    "event-0140"
+  ],
+  "entity-0031": [
+    "event-0003"
+  ],
+  "entity-0053": [
+    "event-0003"
+  ],
+  "entity-0100": [
+    "event-0003"
+  ],
+  "entity-0103": [
+    "event-0006"
+  ],
+  "entity-0123": [
+    "event-0006",
+    "event-0007",
+    "event-0008"
+  ],
+  "entity-0060": [
+    "event-0008"
+  ],
+  "entity-0025": [
+    "event-0009",
+    "event-0014",
+    "event-0021",
+    "event-0022",
+    "event-0023",
+    "event-0026",
+    "event-0027",
+    "event-0036",
+    "event-0074",
+    "event-0083",
+    "event-0124"
+  ],
+  "entity-0090": [
+    "event-0009",
+    "event-0014",
+    "event-0021",
+    "event-0026",
+    "event-0027",
+    "event-0036",
+    "event-0074",
+    "event-0083",
+    "event-0124"
+  ],
+  "entity-0010": [
+    "event-0010",
+    "event-0048",
+    "event-0159"
+  ],
+  "entity-0088": [
+    "event-0010"
+  ],
+  "entity-0128": [
+    "event-0010",
+    "event-0015",
+    "event-0016",
+    "event-0017",
+    "event-0018",
+    "event-0019",
+    "event-0020",
+    "event-0038",
+    "event-0041",
+    "event-0044",
+    "event-0052",
+    "event-0054",
+    "event-0086"
+  ],
+  "entity-0122": [
+    "event-0012"
+  ],
+  "entity-0086": [
+    "event-0013"
+  ],
+  "entity-0125": [
+    "event-0014"
+  ],
+  "entity-0037": [
+    "event-0015",
+    "event-0020",
+    "event-0043",
+    "event-0090",
+    "event-0144"
+  ],
+  "entity-0035": [
+    "event-0019"
+  ],
+  "entity-0004": [
+    "event-0021",
+    "event-0025",
+    "event-0039"
+  ],
+  "entity-0023": [
+    "event-0021",
+    "event-0023",
+    "event-0024",
+    "event-0039",
+    "event-0051",
+    "event-0097",
+    "event-0100",
+    "event-0105",
+    "event-0123",
+    "event-0139",
+    "event-0143",
+    "event-0152",
+    "event-0153",
+    "event-0154",
+    "event-0155",
+    "event-0156",
+    "event-0157"
+  ],
+  "entity-0036": [
+    "event-0021",
+    "event-0025",
+    "event-0039"
+  ],
+  "entity-0087": [
+    "event-0021",
+    "event-0028",
+    "event-0030",
+    "event-0031",
+    "event-0032",
+    "event-0034",
+    "event-0037",
+    "event-0038",
+    "event-0041",
+    "event-0053",
+    "event-0075",
+    "event-0158"
+  ],
+  "entity-0002": [
+    "event-0023",
+    "event-0039",
+    "event-0041",
+    "event-0097",
+    "event-0100",
+    "event-0103",
+    "event-0105"
+  ],
+  "entity-0013": [
+    "event-0025",
+    "event-0028",
+    "event-0076"
+  ],
+  "entity-0117": [
+    "event-0031",
+    "event-0077"
+  ],
+  "entity-0124": [
+    "event-0038",
+    "event-0082"
+  ],
+  "entity-0109": [
+    "event-0042",
+    "event-0047",
+    "event-0092",
+    "event-0129",
+    "event-0132",
+    "event-0160",
+    "event-0163"
+  ],
+  "entity-0076": [
+    "event-0042"
+  ],
+  "entity-0024": [
+    "event-0044"
+  ],
+  "entity-0071": [
+    "event-0045"
+  ],
+  "entity-0050": [
+    "event-0046",
+    "event-0099",
+    "event-0149"
+  ],
+  "entity-0020": [
+    "event-0047",
+    "event-0120"
+  ],
+  "entity-0067": [
+    "event-0052",
+    "event-0101",
+    "event-0122",
+    "event-0150",
+    "event-0165"
+  ],
+  "entity-0056": [
+    "event-0053",
+    "event-0110",
+    "event-0113"
+  ],
+  "entity-0134": [
+    "event-0053",
+    "event-0110",
+    "event-0113"
+  ],
+  "entity-0094": [
+    "event-0055",
+    "event-0109"
+  ],
+  "entity-0009": [
+    "event-0058"
+  ],
+  "entity-0008": [
+    "event-0063"
+  ],
+  "entity-0118": [
+    "event-0066"
+  ],
+  "entity-0135": [
+    "event-0067"
+  ],
+  "entity-0045": [
+    "event-0069",
+    "event-0126",
+    "event-0127"
+  ],
+  "entity-0091": [
+    "event-0069",
+    "event-0127"
+  ],
+  "entity-0016": [
+    "event-0070",
+    "event-0129"
+  ],
+  "entity-0126": [
+    "event-0070",
+    "event-0129"
+  ],
+  "entity-0065": [
+    "event-0071",
+    "event-0130"
+  ],
+  "entity-0038": [
+    "event-0093"
+  ],
+  "entity-0099": [
+    "event-0106"
+  ],
+  "entity-0063": [
+    "event-0109"
+  ],
+  "entity-0107": [
+    "event-0109"
+  ],
+  "entity-0007": [
+    "event-0111"
+  ],
+  "entity-0096": [
+    "event-0119"
+  ],
+  "entity-0079": [
+    "event-0164"
+  ],
+  "entity-0083": [
+    "event-0165"
+  ]
+}

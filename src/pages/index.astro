@@ -6,13 +6,6 @@ import events from '../data/events.json';
 import entities from '../data/entities.json';
 import proceedings from '../data/proceedings.json';
 
-const statusCounts = {
-  alleged: claims.filter((c: any) => c.claim_status === 'alleged').length,
-  supported: claims.filter((c: any) => c.claim_status === 'supported').length,
-  contradicted: claims.filter((c: any) => c.claim_status === 'contradicted').length,
-  judicially_addressed: claims.filter((c: any) => c.claim_status === 'judicially_addressed').length,
-};
-
 const typeCounts = {
   factual_assertion: claims.filter((c: any) => c.claim_type === 'factual_assertion').length,
   legal_position: claims.filter((c: any) => c.claim_type === 'legal_position').length,
@@ -40,7 +33,6 @@ const recentEvents = [...events]
   .sort((a: any, b: any) => b.date.localeCompare(a.date))
   .slice(0, 8);
 
-const maxStatus = Math.max(...Object.values(statusCounts));
 const maxType = Math.max(...Object.values(typeCounts));
 
 const baseUrl = import.meta.env.BASE_URL;
@@ -80,54 +72,22 @@ const base = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
       </div>
     </div>
 
-    <!-- Status + Types -->
-    <div class="grid grid-cols-2 gap-10">
-
-      <!-- Claim Status -->
-      <div class="space-y-4">
-        <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
-          <h2 class="font-display text-xl font-bold">Claim Status</h2>
-          <span class="font-mono text-xxs text-war-text-muted">{linkedClaims} linked</span>
-        </div>
-        <div class="space-y-3">
-          {Object.entries(statusCounts).map(([status, count]) => (
-            <div class="flex items-center gap-3">
-              <span class={`badge badge-${status}`}>{status.replace('_', ' ')}</span>
-              <div class="flex-1 h-1 bg-war-surface2 overflow-hidden">
-                <div
-                  class:list={[
-                    'h-full transition-all',
-                    status === 'alleged' && 'bg-war-amber',
-                    status === 'supported' && 'bg-war-green',
-                    status === 'contradicted' && 'bg-war-red',
-                    status === 'judicially_addressed' && 'bg-war-blue',
-                  ]}
-                  style={`width: ${(count / maxStatus) * 100}%`}
-                />
-              </div>
-              <span class="font-mono text-sm text-war-text-dim w-8 text-right">{count}</span>
-            </div>
-          ))}
-        </div>
+    <!-- Claim Types -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
+        <h2 class="font-display text-xl font-bold">Claim Types</h2>
+        <span class="font-mono text-xxs text-war-text-muted">{claims.length} total · {linkedClaims} linked to evidence</span>
       </div>
-
-      <!-- Claim Types -->
-      <div class="space-y-4">
-        <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
-          <h2 class="font-display text-xl font-bold">Claim Types</h2>
-          <span class="font-mono text-xxs text-war-text-muted">{claims.length} total</span>
-        </div>
-        <div class="space-y-3">
-          {Object.entries(typeCounts).map(([type, count]) => (
-            <div class="flex items-center gap-3">
-              <span class={`badge badge-${type}`}>{type.replace(/_/g, ' ')}</span>
-              <div class="flex-1 h-1 bg-war-surface2 overflow-hidden">
-                <div class="h-full bg-war-text/20" style={`width: ${(count / maxType) * 100}%`} />
-              </div>
-              <span class="font-mono text-sm text-war-text-dim w-8 text-right">{count}</span>
+      <div class="grid grid-cols-5 gap-6">
+        {Object.entries(typeCounts).map(([type, count]) => (
+          <div class="text-center py-3 border-t border-war-border">
+            <div class="font-serif text-2xl font-bold text-war-text">{count}</div>
+            <div class="text-xxs font-mono text-war-text-muted uppercase mt-1">{type.replace(/_/g, ' ')}</div>
+            <div class="mt-2 h-1 bg-war-surface2 overflow-hidden">
+              <div class="h-full bg-war-text/20" style={`width: ${(count / maxType) * 100}%`} />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
 

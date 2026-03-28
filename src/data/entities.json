@@ -39,7 +39,10 @@
     "id": "entity-0007",
     "name": "Abdallah Elcherbini",
     "entity_type": "Individual - Licensed architect, EC Architects",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Elcherbini"
+    ]
   },
   {
     "id": "entity-0008",
@@ -80,7 +83,7 @@
   {
     "id": "entity-0014",
     "name": "Attorney defendants",
-    "entity_type": "Defendants subject to treble damages under Judiciary Law §487",
+    "entity_type": "Defendants subject to treble damages under Judiciary Law \u00a7487",
     "notes_internal": null
   },
   {
@@ -109,7 +112,7 @@
   },
   {
     "id": "entity-0019",
-    "name": "Beyoncé",
+    "name": "Beyonc\u00e9",
     "entity_type": "Person - musician and real estate investor",
     "notes_internal": null
   },
@@ -120,22 +123,14 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0021",
-    "name": "Board",
-    "entity_type": "Entity - condominium governing board",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0022",
-    "name": "Board of 13 Harrison Street",
-    "entity_type": "Institutional Entity",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0023",
     "name": "Board of Managers of 13 Harrison Street Condominium",
     "entity_type": "Entity; governing body",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Board",
+      "Board of 13 Harrison Street"
+    ]
   },
   {
     "id": "entity-0024",
@@ -147,12 +142,6 @@
     "id": "entity-0025",
     "name": "Brill",
     "entity_type": "Individual - Board member",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0026",
-    "name": "Broker Kornmeier",
-    "entity_type": "Individual witness",
     "notes_internal": null
   },
   {
@@ -201,7 +190,10 @@
     "id": "entity-0034",
     "name": "Commercial Division, NY County Supreme Court",
     "entity_type": "Court subdivision",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "NY County Supreme Court"
+    ]
   },
   {
     "id": "entity-0035",
@@ -219,7 +211,11 @@
     "id": "entity-0037",
     "name": "David Kornmeier",
     "entity_type": "Person - broker, Brown Harris Stevens",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Broker Kornmeier",
+      "Kornmeier"
+    ]
   },
   {
     "id": "entity-0038",
@@ -240,22 +236,13 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0041",
-    "name": "Elcherbini",
-    "entity_type": "Individual - Expert",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0042",
-    "name": "Elcherbini (Elcherbini Architects, AIA)",
-    "entity_type": "Architect/Expert",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0043",
     "name": "Elcherbini Architects",
     "entity_type": "Expert/professional firm",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Elcherbini (Elcherbini Architects, AIA)"
+    ]
   },
   {
     "id": "entity-0044",
@@ -267,13 +254,10 @@
     "id": "entity-0045",
     "name": "FINRA",
     "entity_type": "Regulatory Organization",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0046",
-    "name": "FINRA and NASDAQ",
-    "entity_type": "Regulatory enforcement bodies",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "FINRA and NASDAQ"
+    ]
   },
   {
     "id": "entity-0047",
@@ -288,27 +272,18 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0049",
-    "name": "First Department",
-    "entity_type": "Appellate court",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0050",
     "name": "First Department (Appellate Division)",
     "entity_type": "Appellate Court",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "First Department"
+    ]
   },
   {
     "id": "entity-0051",
     "name": "Geraci",
     "entity_type": "Code consulting expert",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0052",
-    "name": "Giacovas",
-    "entity_type": "Attorney; drafter of Term Sheet §5(a)",
     "notes_internal": null
   },
   {
@@ -373,14 +348,8 @@
   },
   {
     "id": "entity-0063",
-    "name": "Josue Peña",
+    "name": "Josue Pe\u00f1a",
     "entity_type": "individual; MEP technician; NY Brownstone LLC",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0064",
-    "name": "Judell",
-    "entity_type": "Individual attorney - defendant's counsel",
     "notes_internal": null
   },
   {
@@ -399,13 +368,11 @@
     "id": "entity-0067",
     "name": "Justice Mary V. Rosado",
     "entity_type": "judge; New York County Supreme Court, Part 33",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0068",
-    "name": "Justice Rosado",
-    "entity_type": "Individual - Court judge",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Justice Rosado",
+      "Rosado"
+    ]
   },
   {
     "id": "entity-0069",
@@ -444,12 +411,6 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0075",
-    "name": "Kornmeier",
-    "entity_type": "Individual - Witness/appraiser",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0076",
     "name": "Lazare Potter Giacovas & Moyle LLP",
     "entity_type": "law firm; counsel for Bleich in 2019 action",
@@ -462,40 +423,25 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0078",
-    "name": "Lynn E. Judell",
-    "entity_type": "Individual - Attorney, Rukab & Brash PLLC",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0079",
     "name": "Lynn E. Judell, Esq.",
     "entity_type": "Attorney defendant",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0080",
-    "name": "Manhattan DA's Rackets Bureau",
-    "entity_type": "Prosecutorial agency",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0081",
-    "name": "Manhattan District Attorney",
-    "entity_type": "Government Agency",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0082",
-    "name": "Manhattan District Attorney - Rackets Bureau",
-    "entity_type": "Government agency/Prosecution unit",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Judell",
+      "Lynn E. Judell"
+    ]
   },
   {
     "id": "entity-0083",
     "name": "Manhattan District Attorney's Rackets Bureau",
     "entity_type": "Government agency",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Manhattan DA's Rackets Bureau",
+      "Manhattan District Attorney",
+      "Manhattan District Attorney - Rackets Bureau"
+    ]
   },
   {
     "id": "entity-0084",
@@ -553,7 +499,7 @@
   },
   {
     "id": "entity-0093",
-    "name": "NY Brownstone (Singh/Peña)",
+    "name": "NY Brownstone (Singh/Pe\u00f1a)",
     "entity_type": "Inspection/Consulting Firm",
     "notes_internal": null
   },
@@ -561,12 +507,6 @@
     "id": "entity-0094",
     "name": "NY Brownstone LLC",
     "entity_type": "mechanical/electrical/plumbing contractor; Bleich's MEP service provider",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0095",
-    "name": "NY County Supreme Court",
-    "entity_type": "Court",
     "notes_internal": null
   },
   {
@@ -609,7 +549,11 @@
     "id": "entity-0102",
     "name": "Owner of Unit 2",
     "entity_type": "Individual plaintiff",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Unit 2 Owner",
+      "Unit 2 owner (individual)"
+    ]
   },
   {
     "id": "entity-0103",
@@ -642,16 +586,15 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0108",
-    "name": "Robert A. Giacovas",
-    "entity_type": "attorney; counsel for Bleich in 2019 action",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0109",
     "name": "Robert A. Giacovas, Esq.",
     "entity_type": "Attorney defendant",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Giacovas",
+      "Robert A. Giacovas",
+      "Robert Giacovas"
+    ]
   },
   {
     "id": "entity-0110",
@@ -660,21 +603,9 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0111",
-    "name": "Robert Giacovas",
-    "entity_type": "Individual; attorney representing Bleich",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0112",
     "name": "Ron",
     "entity_type": "Third party (referenced as having been in touch with contractor)",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0113",
-    "name": "Rosado",
-    "entity_type": "Individual - Judge/Court",
     "notes_internal": null
   },
   {
@@ -709,7 +640,7 @@
   },
   {
     "id": "entity-0119",
-    "name": "Singh/Peña",
+    "name": "Singh/Pe\u00f1a",
     "entity_type": "Individuals - Source authors",
     "notes_internal": null
   },
@@ -774,28 +705,13 @@
     "notes_internal": null
   },
   {
-    "id": "entity-0130",
-    "name": "Unit 2",
-    "entity_type": "Real property - residential unit",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0131",
-    "name": "Unit 2 Owner",
-    "entity_type": "Individual - Plaintiff/Victim",
-    "notes_internal": null
-  },
-  {
-    "id": "entity-0132",
-    "name": "Unit 2 owner (individual)",
-    "entity_type": "Individual plaintiff/party",
-    "notes_internal": null
-  },
-  {
     "id": "entity-0133",
     "name": "Unit 2, 13 Harrison Street",
     "entity_type": "Property/Legal unit",
-    "notes_internal": null
+    "notes_internal": null,
+    "aliases": [
+      "Unit 2"
+    ]
   },
   {
     "id": "entity-0134",

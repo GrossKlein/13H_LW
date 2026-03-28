@@ -25,7 +25,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0012",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -43,7 +43,7 @@
       "entity-0031",
       "entity-0053",
       "entity-0100",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -58,7 +58,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -137,7 +137,7 @@
     "related_entity_ids": [
       "entity-0025",
       "entity-0090",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -169,7 +169,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -217,7 +217,7 @@
       "entity-0025",
       "entity-0090",
       "entity-0125",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -233,7 +233,6 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0037",
-      "entity-0075",
       "entity-0128"
     ],
     "causal_tags": [],
@@ -311,7 +310,6 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0037",
-      "entity-0075",
       "entity-0128"
     ],
     "causal_tags": [],
@@ -341,7 +339,7 @@
     "related_entity_ids": [
       "entity-0003",
       "entity-0004",
-      "entity-0021",
+      "entity-0023",
       "entity-0025",
       "entity-0036",
       "entity-0087",
@@ -395,9 +393,9 @@
     ],
     "related_entity_ids": [
       "entity-0002",
-      "entity-0021",
+      "entity-0023",
       "entity-0025",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -431,7 +429,7 @@
       "evidence-0141"
     ],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -450,7 +448,7 @@
       "entity-0004",
       "entity-0013",
       "entity-0036",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -555,7 +553,7 @@
     "related_entity_ids": [
       "entity-0013",
       "entity-0087",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -570,7 +568,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -602,7 +600,7 @@
     "related_entity_ids": [
       "entity-0087",
       "entity-0117",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -660,7 +658,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -676,7 +674,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0087",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -691,7 +689,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -843,7 +841,7 @@
     ],
     "related_entity_ids": [
       "entity-0087",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -896,7 +894,7 @@
       "entity-0087",
       "entity-0124",
       "entity-0128",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -914,7 +912,6 @@
       "entity-0002",
       "entity-0003",
       "entity-0004",
-      "entity-0021",
       "entity-0023",
       "entity-0036"
     ],
@@ -996,9 +993,8 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0052",
-      "entity-0076",
-      "entity-0108"
+      "entity-0109",
+      "entity-0076"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1016,8 +1012,7 @@
       "evidence-0157"
     ],
     "related_entity_ids": [
-      "entity-0037",
-      "entity-0075"
+      "entity-0037"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1078,7 +1073,7 @@
       "evidence-0160"
     ],
     "related_entity_ids": [
-      "entity-0049"
+      "entity-0050"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1152,8 +1147,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0020",
-      "entity-0052",
-      "entity-0111"
+      "entity-0109"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1397,7 +1391,7 @@
       "evidence-0154"
     ],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1502,7 +1496,6 @@
     ],
     "related_entity_ids": [
       "entity-0067",
-      "entity-0113",
       "entity-0128"
     ],
     "causal_tags": [],
@@ -1520,7 +1513,7 @@
     "related_entity_ids": [
       "entity-0056",
       "entity-0087",
-      "entity-0130",
+      "entity-0133",
       "entity-0134"
     ],
     "causal_tags": [],
@@ -1548,7 +1541,7 @@
   },
   {
     "id": "event-0055",
-    "date": "November 6–7, 2025",
+    "date": "November 6\u20137, 2025",
     "date_certainty": "approximate",
     "description": "NY Brownstone LLC MEP technicians inspected rooftop HVAC equipment",
     "event_type": "inspection",
@@ -1731,7 +1724,7 @@
       "evidence-0152"
     ],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1853,7 +1846,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0008",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -1978,7 +1971,6 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0045",
-      "entity-0046",
       "entity-0091"
     ],
     "causal_tags": [],
@@ -2032,7 +2024,7 @@
     "id": "event-0072",
     "date": "May 24, 2025",
     "date_certainty": "approximate",
-    "description": "Bleich created and sent comparable market analysis valuation spreadsheet with demand for $6–8M settlement",
+    "description": "Bleich created and sent comparable market analysis valuation spreadsheet with demand for $6\u20138M settlement",
     "event_type": "communication",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -2400,7 +2392,7 @@
       "evidence-0152"
     ],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2423,7 +2415,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0128",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2535,7 +2527,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0075"
+      "entity-0037"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2621,7 +2613,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0052"
+      "entity-0109"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2820,7 +2812,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0002",
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2926,7 +2918,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0049"
+      "entity-0050"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -2942,8 +2934,8 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0002",
-      "entity-0021",
-      "entity-0130"
+      "entity-0023",
+      "entity-0133"
     ],
     "causal_tags": [
       "pre_injunction"
@@ -2960,8 +2952,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0068",
-      "entity-0113"
+      "entity-0067"
     ],
     "causal_tags": [
       "post_injunction"
@@ -2994,7 +2985,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0002",
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [
       "post_injunction"
@@ -3101,8 +3092,8 @@
     ],
     "related_entity_ids": [
       "entity-0002",
-      "entity-0021",
-      "entity-0130"
+      "entity-0023",
+      "entity-0133"
     ],
     "causal_tags": [
       "post_injunction"
@@ -3225,7 +3216,7 @@
     "id": "event-0109",
     "date": "November 2025",
     "date_certainty": "approximate",
-    "description": "NY Brownstone LLC inspection by Ricardo Singh and Josue Peña discovered HVAC misidentification",
+    "description": "NY Brownstone LLC inspection by Ricardo Singh and Josue Pe\u00f1a discovered HVAC misidentification",
     "event_type": "inspection",
     "proceeding_id": null,
     "related_claim_ids": [
@@ -3389,7 +3380,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0041"
+      "entity-0007"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -3525,7 +3516,7 @@
     "id": "event-0116",
     "date": "undated",
     "date_certainty": "inferred",
-    "description": "Bleich sent $6–8 million extortion demand",
+    "description": "Bleich sent $6\u20138 million extortion demand",
     "event_type": "communication",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -3551,7 +3542,7 @@
     "id": "event-0118",
     "date": "undated",
     "date_certainty": "inferred",
-    "description": "Evidence assembled across four active proceedings involving 24 documented material misstatements, six independent proofs of HVAC perjury, complete fabrication of equipment ownership, physical evidence tampering captured on video, and extortion premium of $1.1–5.5 million above defendant's own valuation",
+    "description": "Evidence assembled across four active proceedings involving 24 documented material misstatements, six independent proofs of HVAC perjury, complete fabrication of equipment ownership, physical evidence tampering captured on video, and extortion premium of $1.1\u20135.5 million above defendant's own valuation",
     "event_type": "filing",
     "proceeding_id": null,
     "related_claim_ids": [
@@ -3674,8 +3665,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0068",
-      "entity-0113"
+      "entity-0067"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -3701,7 +3691,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -3814,7 +3804,7 @@
     "related_evidence_ids": [],
     "related_entity_ids": [
       "entity-0016",
-      "entity-0052",
+      "entity-0109",
       "entity-0126"
     ],
     "causal_tags": [],
@@ -3867,7 +3857,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0052"
+      "entity-0109"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4101,7 +4091,7 @@
     "id": "event-0136",
     "date": "2025-05-24",
     "date_certainty": "approximate",
-    "description": "Bleich created valuation spreadsheet showing $4.7–4.9M unit value",
+    "description": "Bleich created valuation spreadsheet showing $4.7\u20134.9M unit value",
     "event_type": "filing",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -4114,7 +4104,7 @@
     "id": "event-0137",
     "date": "2025-05-01",
     "date_certainty": "approximate",
-    "description": "Bleich demanded $6–8M for unit sale (May 2025 demand)",
+    "description": "Bleich demanded $6\u20138M for unit sale (May 2025 demand)",
     "event_type": "transaction",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -4127,7 +4117,7 @@
     "id": "event-0138",
     "date": "2025-09-26",
     "date_certainty": "approximate",
-    "description": "Settlement Term Sheet prepared with §5(a) injunction preservation clause",
+    "description": "Settlement Term Sheet prepared with \u00a75(a) injunction preservation clause",
     "event_type": "demand",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -4146,7 +4136,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4189,7 +4179,7 @@
       "evidence-0152"
     ],
     "related_entity_ids": [
-      "entity-0130"
+      "entity-0133"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4224,13 +4214,13 @@
     "id": "event-0143",
     "date": "2018-01-01 to 2019-12-31",
     "date_certainty": "approximate",
-    "description": "Phase 1 (2018–2019): Governance Takeover. Bleich maneuvered to gain control of Board and changed bylaws in secret.",
+    "description": "Phase 1 (2018\u20132019): Governance Takeover. Bleich maneuvered to gain control of Board and changed bylaws in secret.",
     "event_type": "modification",
     "proceeding_id": null,
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4239,7 +4229,7 @@
     "id": "event-0144",
     "date": "2017-01-01 to 2019-12-31",
     "date_certainty": "approximate",
-    "description": "Phase 2 (2017–2019): Knowledge and Concealment. Bleich explicitly informed of cellar's illegal status by Kornmeier.",
+    "description": "Phase 2 (2017\u20132019): Knowledge and Concealment. Bleich explicitly informed of cellar's illegal status by Kornmeier.",
     "event_type": "modification",
     "proceeding_id": null,
     "related_claim_ids": [
@@ -4303,7 +4293,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0075"
+      "entity-0037"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4312,7 +4302,7 @@
     "id": "event-0145",
     "date": "2019-01-01 to 2024-06-30",
     "date_certainty": "approximate",
-    "description": "Phase 3 (2019–2024): Systematic Obstruction. Three documented occasions Bleichs refused DOB entry. June 2024: sheetrock/cardboard erected over illegal bedroom doors.",
+    "description": "Phase 3 (2019\u20132024): Systematic Obstruction. Three documented occasions Bleichs refused DOB entry. June 2024: sheetrock/cardboard erected over illegal bedroom doors.",
     "event_type": "obstruction",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -4403,7 +4393,7 @@
     "id": "event-0147",
     "date": "2025-05-01 to 2025-09-26",
     "date_certainty": "approximate",
-    "description": "Phase 5 (May–September 2025): The Extortion Demand. Armed with perjury-obtained injunction, Bleich demanded $6–8 million for $2.5M unit.",
+    "description": "Phase 5 (May\u2013September 2025): The Extortion Demand. Armed with perjury-obtained injunction, Bleich demanded $6\u20138 million for $2.5M unit.",
     "event_type": "demand",
     "proceeding_id": null,
     "related_claim_ids": [],
@@ -4504,7 +4494,7 @@
     ],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0049"
+      "entity-0050"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4608,8 +4598,7 @@
       "evidence-0160"
     ],
     "related_entity_ids": [
-      "entity-0068",
-      "entity-0113"
+      "entity-0067"
     ],
     "causal_tags": [
       "supports_claim_sequence"
@@ -4706,7 +4695,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4721,7 +4710,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4736,7 +4725,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4751,7 +4740,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4766,7 +4755,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4781,7 +4770,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0021"
+      "entity-0023"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4835,8 +4824,7 @@
       "evidence-0157"
     ],
     "related_entity_ids": [
-      "entity-0052",
-      "entity-0111"
+      "entity-0109"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4879,8 +4867,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0052",
-      "entity-0111"
+      "entity-0109"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4895,8 +4882,7 @@
     "related_claim_ids": [],
     "related_evidence_ids": [],
     "related_entity_ids": [
-      "entity-0064",
-      "entity-0078"
+      "entity-0079"
     ],
     "causal_tags": [],
     "notes_internal": null
@@ -4920,9 +4906,8 @@
       "evidence-0160"
     ],
     "related_entity_ids": [
-      "entity-0068",
-      "entity-0080",
-      "entity-0113"
+      "entity-0067",
+      "entity-0083"
     ],
     "causal_tags": [],
     "notes_internal": null
