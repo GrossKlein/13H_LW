@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RelationshipGraph from '../components/RelationshipGraph';
+
+// Import data
+import claimsData from '../data/claims.json';
+import evidenceData from '../data/evidence.json';
+import eventsData from '../data/events.json';
+import entitiesData from '../data/entities.json';
+import proceedingsData from '../data/proceedings.json';
+
+const title = 'Relationship Graph';
+---
+
+<BaseLayout title={title} activeNav="graph">
+  <div class="w-full h-full bg-war-bg">
+    <RelationshipGraph
+      client:load
+      claims={claimsData}
+      evidence={evidenceData}
+      events={eventsData}
+      entities={entitiesData}
+      proceedings={proceedingsData}
+    />
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntitiesBrowser from '../../components/EntitiesBrowser';
+import entities from '../../data/entities.json';
+import claims from '../../data/claims.json';
+import events from '../../data/events.json';
+---
+
+<BaseLayout title="Entities" activeNav="entities">
+  <div class="p-6 max-w-7xl mx-auto space-y-6">
+
+    <!-- Header -->
+    <div class="flex items-end justify-between">
+      <div>
+        <h1 class="font-display text-2xl text-war-text">Entities</h1>
+        <p class="text-war-text-muted text-sm mt-1 font-mono">People, organizations, and locations involved in the case</p>
+      </div>
+      <div class="font-mono text-xxs text-war-text-muted">
+        {entities.length} total entities · {entities.filter((e: any) => e.notes_internal !== null).length} with internal notes
+      </div>
+    </div>
+
+    <!-- Entity browser -->
+    <EntitiesBrowser client:load entities={entities} claims={claims} events={events} />
+
+  </div>
+</BaseLayout>
+
+<style is:global>
+  @import '../../styles/global.css';
+</style>

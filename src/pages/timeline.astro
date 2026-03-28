@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline';
+import events from '../data/events.json';
+import claims from '../data/claims.json';
+import proceedings from '../data/proceedings.json';
+---
+
+<BaseLayout title="Timeline" activeNav="timeline">
+  <div class="p-6 max-w-7xl mx-auto">
+    <Timeline client:load {events} {claims} {proceedings} />
+  </div>
+</BaseLayout>

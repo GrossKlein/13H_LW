@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ClaimsBrowser from '../../components/ClaimsBrowser';
+import claims from '../../data/claims.json';
+import evidence from '../../data/evidence.json';
+---
+
+<BaseLayout title="Claims" activeNav="claims">
+  <ClaimsBrowser client:load {claims} {evidence} />
+</BaseLayout>

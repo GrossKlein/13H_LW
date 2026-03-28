@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import claims from '../data/claims.json';
+import evidence from '../data/evidence.json';
+import events from '../data/events.json';
+import entities from '../data/entities.json';
+import proceedings from '../data/proceedings.json';
+
+const statusCounts = {
+  alleged: claims.filter((c: any) => c.claim_status === 'alleged').length,
+  supported: claims.filter((c: any) => c.claim_status === 'supported').length,
+  contradicted: claims.filter((c: any) => c.claim_status === 'contradicted').length,
+  judicially_addressed: claims.filter((c: any) => c.claim_status === 'judicially_addressed').length,
+};
+
+const typeCounts = {
+  factual_assertion: claims.filter((c: any) => c.claim_type === 'factual_assertion').length,
+  legal_position: claims.filter((c: any) => c.claim_type === 'legal_position').length,
+  sworn_statement: claims.filter((c: any) => c.claim_type === 'sworn_statement').length,
+  allegation: claims.filter((c: any) => c.claim_type === 'allegation').length,
+  expert_opinion: claims.filter((c: any) => c.claim_type === 'expert_opinion').length,
+};
+
+const evidenceTypeCounts: Record<string, number> = {};
+evidence.forEach((e: any) => {
+  evidenceTypeCounts[e.type] = (evidenceTypeCounts[e.type] || 0) + 1;
+});
+
+const eventTypeCounts: Record<string, number> = {};
+events.forEach((e: any) => {
+  eventTypeCounts[e.event_type] = (eventTypeCounts[e.event_type] || 0) + 1;
+});
+
+const linkedClaims = claims.filter((c: any) => c.supporting_evidence_ids.length > 0 || c.contradicting_evidence_ids.length > 0).length;
+const linkedEvidence = evidence.filter((e: any) => e.related_claim_ids.length > 0).length;
+const linkedEvents = events.filter((e: any) => e.related_claim_ids.length > 0 || e.related_evidence_ids.length > 0).length;
+
+const recentEvents = [...events]
+  .filter((e: any) => e.date && e.date !== 'unspecified')
+  .sort((a: any, b: any) => b.date.localeCompare(a.date))
+  .slice(0, 8);
+
+const maxStatus = Math.max(...Object.values(statusCounts));
+const maxType = Math.max(...Object.values(typeCounts));
+---
+
+<BaseLayout title="Dashboard" activeNav="dashboard">
+  <div class="p-6 max-w-7xl mx-auto space-y-6">
+
+    <!-- Header -->
+    <div class="flex items-end justify-between">
+      <div>
+        <h1 class="font-display text-2xl text-war-text">Litigation Dashboard</h1>
+        <p class="text-war-text-muted text-sm mt-1 font-mono">13 Harrison Street, TriBeCa &mdash; Michael Bleich Matter</p>
+      </div>
+      <div class="font-mono text-xxs text-war-text-muted">
+        Pipeline v1.0 &middot; {claims.length}c &middot; {evidence.length}e &middot; {events.length}ev
+      </div>
+    </div>
+
+    <!-- Metrics row -->
+    <div class="grid grid-cols-5 gap-3">
+      <div class="card text-center">
+        <div class="metric-value text-war-text">{claims.length}</div>
+        <div class="metric-label">Claims</div>
+      </div>
+      <div class="card text-center">
+        <div class="metric-value text-war-text">{evidence.length}</div>
+        <div class="metric-label">Evidence</div>
+      </div>
+      <div class="card text-center">
+        <div class="metric-value text-war-text">{events.length}</div>
+        <div class="metric-label">Events</div>
+      </div>
+      <div class="card text-center">
+        <div class="metric-value text-war-text">{entities.length}</div>
+        <div class="metric-label">Entities</div>
+      </div>
+      <div class="card text-center">
+        <div class="metric-value text-war-text">{proceedings.length}</div>
+        <div class="metric-label">Proceedings</div>
+      </div>
+    </div>
+
+    <!-- Status + Types row -->
+    <div class="grid grid-cols-2 gap-3">
+
+      <!-- Claim Status -->
+      <div class="card space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="section-title">Claim Status</h2>
+          <span class="font-mono text-xxs text-war-text-muted">{linkedClaims} linked</span>
+        </div>
+        <div class="space-y-2">
+          {Object.entries(statusCounts).map(([status, count]) => (
+            <div class="flex items-center gap-3">
+              <span class={`badge badge-${status}`}>{status.replace('_', ' ')}</span>
+              <div class="flex-1 h-1.5 bg-war-bg rounded-full overflow-hidden">
+                <div
+                  class:list={[
+                    'h-full rounded-full transition-all',
+                    status === 'alleged' && 'bg-war-amber',
+                    status === 'supported' && 'bg-war-green',
+                    status === 'contradicted' && 'bg-war-red',
+                    status === 'judicially_addressed' && 'bg-war-blue',
+                  ]}
+                  style={`width: ${(count / maxStatus) * 100}%`}
+                />
+              </div>
+              <span class="font-mono text-sm text-war-text-dim w-8 text-right">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Claim Types -->
+      <div class="card space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="section-title">Claim Types</h2>
+          <span class="font-mono text-xxs text-war-text-muted">{claims.length} total</span>
+        </div>
+        <div class="space-y-2">
+          {Object.entries(typeCounts).map(([type, count]) => (
+            <div class="flex items-center gap-3">
+              <span class={`badge badge-${type}`}>{type.replace(/_/g, ' ')}</span>
+              <div class="flex-1 h-1.5 bg-war-bg rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-war-text/20" style={`width: ${(count / maxType) * 100}%`} />
+              </div>
+              <span class="font-mono text-sm text-war-text-dim w-8 text-right">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Evidence + Events breakdown -->
+    <div class="grid grid-cols-2 gap-3">
+
+      <!-- Evidence by type -->
+      <div class="card space-y-3">
+        <h2 class="section-title">Evidence Breakdown</h2>
+        <div class="grid grid-cols-3 gap-2">
+          {Object.entries(evidenceTypeCounts).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
+            <div class="bg-war-bg rounded-sm px-3 py-2">
+              <div class="font-mono text-lg text-war-text">{count}</div>
+              <div class="text-xxs font-mono text-war-text-muted uppercase">{type.replace(/_/g, ' ')}</div>
+            </div>
+          ))}
+        </div>
+        <div class="text-xxs text-war-text-muted font-mono pt-1">
+          {linkedEvidence} of {evidence.length} items linked to claims
+        </div>
+      </div>
+
+      <!-- Events by type -->
+      <div class="card space-y-3">
+        <h2 class="section-title">Event Breakdown</h2>
+        <div class="grid grid-cols-3 gap-2">
+          {Object.entries(eventTypeCounts).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
+            <div class="bg-war-bg rounded-sm px-3 py-2">
+              <div class="font-mono text-lg text-war-text">{count}</div>
+              <div class="text-xxs font-mono text-war-text-muted uppercase">{type.replace(/_/g, ' ')}</div>
+            </div>
+          ))}
+        </div>
+        <div class="text-xxs text-war-text-muted font-mono pt-1">
+          {linkedEvents} of {events.length} events with relationship links
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent events -->
+    <div class="card space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="section-title">Recent Events</h2>
+        <a href="/timeline/" class="text-xxs font-mono text-war-amber hover:text-war-amber/80 uppercase tracking-widest">View Timeline &rarr;</a>
+      </div>
+      <div class="divide-y divide-war-border/50">
+        {recentEvents.map((event: any) => (
+          <div class="flex items-start gap-4 py-2.5">
+            <span class="font-mono text-xxs text-war-text-muted whitespace-nowrap pt-0.5">{event.date}</span>
+            <span class={`badge badge-${event.event_type === 'filing' ? 'factual_assertion' : event.event_type === 'ruling' ? 'judicially_addressed' : event.event_type === 'obstruction' ? 'contradicted' : 'alleged'}`}>
+              {event.event_type}
+            </span>
+            <span class="text-sm text-war-text-dim flex-1">{event.description.length > 120 ? event.description.slice(0, 120) + '...' : event.description}</span>
+            <span class="font-mono text-xxs text-war-text-muted">{event.id}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

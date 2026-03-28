@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  html {
+    @apply bg-war-bg text-war-text antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  body {
+    @apply font-sans text-sm leading-relaxed;
+  }
+
+  ::selection {
+    @apply bg-war-amber/20 text-war-amber;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-war-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-war-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-war-border-hi;
+  }
+}
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 text-xxs font-mono font-medium uppercase tracking-wider rounded-sm;
+  }
+
+  .badge-alleged { @apply bg-war-amber/10 text-war-amber border border-war-amber/20; }
+  .badge-supported { @apply bg-war-green/10 text-war-green border border-war-green/20; }
+  .badge-contradicted { @apply bg-war-red/10 text-war-red border border-war-red/20; }
+  .badge-judicially_addressed { @apply bg-war-blue/10 text-war-blue border border-war-blue/20; }
+
+  .badge-factual_assertion { @apply bg-war-text/5 text-war-text-dim border border-war-border; }
+  .badge-legal_position { @apply bg-war-cyan/10 text-war-cyan border border-war-cyan/20; }
+  .badge-sworn_statement { @apply bg-war-amber/10 text-war-amber border border-war-amber/20; }
+  .badge-allegation { @apply bg-war-red/10 text-war-red border border-war-red/20; }
+  .badge-expert_opinion { @apply bg-war-blue/10 text-war-blue border border-war-blue/20; }
+
+  .card {
+    @apply bg-war-surface border border-war-border rounded-sm p-4;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-150 hover:border-war-border-hi hover:bg-war-surface2;
+  }
+
+  .metric-value {
+    @apply font-mono text-3xl font-semibold tracking-tight;
+  }
+
+  .metric-label {
+    @apply text-xxs font-mono uppercase tracking-widest text-war-text-muted mt-1;
+  }
+
+  .table-header {
+    @apply text-xxs font-mono uppercase tracking-widest text-war-text-muted px-3 py-2 text-left border-b border-war-border;
+  }
+
+  .table-cell {
+    @apply px-3 py-2.5 border-b border-war-border/50 text-sm;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2.5 px-3 py-2 text-sm text-war-text-dim transition-colors duration-100 rounded-sm;
+  }
+
+  .nav-link:hover {
+    @apply text-war-text bg-war-surface2;
+  }
+
+  .nav-link.active {
+    @apply text-war-amber bg-war-amber/5 border-l-2 border-war-amber;
+  }
+
+  .section-title {
+    @apply font-display text-xl text-war-text tracking-tight;
+  }
+
+  .input-search {
+    @apply w-full bg-war-surface border border-war-border rounded-sm px-3 py-2 text-sm text-war-text placeholder:text-war-text-muted focus:outline-none focus:border-war-amber/40 focus:ring-1 focus:ring-war-amber/20 font-mono;
+  }
+}
