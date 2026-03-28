@@ -1,25 +1,7 @@
-import React, { useState, useMemo } from 'react';
-
-interface Entity {
-  id: string;
-  name: string;
-  entity_type: string;
-  notes_internal: string | null;
-}
-
-interface Claim {
-  id: string;
-  statement: string;
-  asserted_by: string;
-  claim_status: string;
-}
-
-interface Event {
-  id: string;
-  date: string;
-  description: string;
-  related_entity_ids: string[];
-}
+import React, { useState, useMemo, useEffect } from 'react';
+import type { Claim } from '../types/claim';
+import type { Event } from '../types/event';
+import type { Entity } from '../types/entity';
 
 interface EntitiesBrowserProps {
   entities: Entity[];
@@ -29,11 +11,16 @@ interface EntitiesBrowserProps {
 
 type SortOption = 'alphabetical' | 'most-claims' | 'most-events';
 
-export default function EntitiesBrowser({ entities, claims, events }: EntitiesBrowserProps) {
+const EntitiesBrowser = ({ entities, claims, events }: EntitiesBrowserProps) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState<string>('');
   const [expandedEntityId, setExpandedEntityId] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>('alphabetical');
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   // Get unique entity types
   const entityTypes = useMemo(() => {
@@ -102,6 +89,23 @@ export default function EntitiesBrowser({ entities, claims, events }: EntitiesBr
   const truncateText = (text: string, maxLength: number = 150) => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
   };
+
+  if (!isHydrated) {
+    return (
+      <div className="space-y-6 animate-pulse">
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-10 bg-war-surface2 rounded-sm" />
+          <div className="h-10 w-32 bg-war-surface2 rounded-sm" />
+          <div className="h-10 w-32 bg-war-surface2 rounded-sm" />
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div key={i} className="h-32 bg-war-surface2 rounded-sm" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -284,4 +288,6 @@ export default function EntitiesBrowser({ entities, claims, events }: EntitiesBr
       )}
     </div>
   );
-}
+};
+
+export default EntitiesBrowser;

@@ -1,37 +1,6 @@
-import React, { useState, useMemo } from 'react';
-
-interface Claim {
-  id: string;
-  statement: string;
-  asserted_by: string;
-  asserted_in: string;
-  proceeding_ids: string[];
-  claim_type: string;
-  claim_status: string;
-  contradiction_type: string | null;
-  supporting_evidence_ids: string[];
-  contradicting_evidence_ids: string[];
-  related_event_ids: string[];
-  judicial_treatment: string | null;
-  legal_significance: string;
-  review_status: string;
-  notes_internal: string | null;
-}
-
-interface Evidence {
-  id: string;
-  type: string;
-  source: string;
-  date: string | null;
-  excerpt: string;
-  full_reference: string | null;
-  proceeding_ids: string[];
-  related_claim_ids: string[];
-  related_event_ids: string[];
-  provenance: string;
-  reliability_level: string;
-  notes_internal: string | null;
-}
+import React, { useState, useMemo, useEffect } from 'react';
+import type { Claim } from '../types/claim';
+import type { Evidence } from '../types/evidence';
 
 interface Props {
   claims: Claim[];
@@ -40,12 +9,17 @@ interface Props {
 
 const ROWS_PER_PAGE = 25;
 
-export default function ClaimsBrowser({ claims, evidence }: Props) {
+const ClaimsBrowser = ({ claims, evidence }: Props) => {
   const [searchText, setSearchText] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [expandedClaimId, setExpandedClaimId] = useState<string | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   // Create evidence lookup map
   const evidenceMap = useMemo(() => {
@@ -101,6 +75,26 @@ export default function ClaimsBrowser({ claims, evidence }: Props) {
   const formatClaimType = (type: string) => {
     return type.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   };
+
+  if (!isHydrated) {
+    return (
+      <div className="p-6 max-w-7xl mx-auto space-y-4 animate-pulse">
+        <div className="h-6 w-48 bg-war-surface2 rounded-sm" />
+        <div className="card space-y-4">
+          <div className="h-10 bg-war-surface2 rounded-sm" />
+          <div className="grid grid-cols-2 gap-4">
+            <div className="h-10 bg-war-surface2 rounded-sm" />
+            <div className="h-10 bg-war-surface2 rounded-sm" />
+          </div>
+        </div>
+        <div className="card space-y-2">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="h-12 bg-war-surface2 rounded-sm" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-4">
@@ -409,4 +403,6 @@ export default function ClaimsBrowser({ claims, evidence }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default ClaimsBrowser;

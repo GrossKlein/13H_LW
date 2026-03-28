@@ -1,48 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-
-interface Claim {
-  id: string;
-  statement: string;
-  asserted_by: string;
-  supporting_evidence_ids: string[];
-  contradicting_evidence_ids: string[];
-  related_event_ids: string[];
-  proceeding_ids: string[];
-}
-
-interface Evidence {
-  id: string;
-  type: string;
-  excerpt: string;
-  related_claim_ids: string[];
-  related_event_ids: string[];
-  proceeding_ids: string[];
-}
-
-interface Event {
-  id: string;
-  date: string;
-  description: string;
-  related_claim_ids: string[];
-  related_evidence_ids: string[];
-  related_entity_ids: string[];
-  proceeding_id: string | null;
-}
-
-interface Entity {
-  id: string;
-  name: string;
-  entity_type: string;
-}
-
-interface Proceeding {
-  id: string;
-  title: string;
-  claim_ids: string[];
-  event_ids: string[];
-  evidence_ids: string[];
-}
+import type { Claim } from '../types/claim';
+import type { Evidence } from '../types/evidence';
+import type { Event } from '../types/event';
+import type { Entity } from '../types/entity';
+import type { Proceeding } from '../types/proceeding';
 
 interface Node {
   id: string;
@@ -82,14 +44,15 @@ interface RelationshipGraphProps {
   proceedings: Proceeding[];
 }
 
-export default function RelationshipGraph({
+const RelationshipGraph = ({
   claims,
   evidence,
   events,
   entities,
   proceedings,
-}: RelationshipGraphProps) {
+}: RelationshipGraphProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
   const [nodeTypes, setNodeTypes] = useState({
     claim: true,
     evidence: true,
@@ -106,6 +69,10 @@ export default function RelationshipGraph({
     type: string;
     info: string;
   } | null>(null);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -380,6 +347,25 @@ export default function RelationshipGraph({
     };
   }, [claims, evidence, events, entities, proceedings, nodeTypes, minConnections]);
 
+  if (!isHydrated) {
+    return (
+      <div className="relative w-full h-screen bg-war-bg animate-pulse">
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center space-y-4">
+            <div className="w-16 h-16 rounded-full bg-war-surface2 mx-auto" />
+            <div className="h-4 w-48 bg-war-surface2 rounded-sm mx-auto" />
+            <div className="h-3 w-32 bg-war-surface2 rounded-sm mx-auto" />
+          </div>
+        </div>
+        <div className="fixed top-4 right-4 bg-war-surface/90 border border-war-border rounded-lg p-4 w-64 space-y-3">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} className="h-5 bg-war-surface2 rounded-sm" />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full h-screen bg-war-bg">
       <svg
@@ -469,4 +455,6 @@ export default function RelationshipGraph({
       )}
     </div>
   );
-}
+};
+
+export default RelationshipGraph;

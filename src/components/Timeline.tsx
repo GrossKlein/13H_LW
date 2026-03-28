@@ -1,31 +1,7 @@
-import React, { useState, useMemo } from 'react';
-
-interface Event {
-  id: string;
-  date: string;
-  date_certainty: 'exact' | 'approximate' | 'inferred';
-  description: string;
-  event_type: 'filing' | 'communication' | 'inspection' | 'ruling' | 'transaction' | 'modification' | 'demand' | 'obstruction';
-  proceeding_id: string | null;
-  related_claim_ids: string[];
-  related_evidence_ids: string[];
-  related_entity_ids: string[];
-  causal_tags: string[];
-  notes_internal: string | null;
-}
-
-interface Claim {
-  id: string;
-  statement: string;
-  [key: string]: any;
-}
-
-interface Proceeding {
-  id: string;
-  index_number: string;
-  title: string;
-  [key: string]: any;
-}
+import React, { useState, useMemo, useEffect } from 'react';
+import type { Claim } from '../types/claim';
+import type { Event } from '../types/event';
+import type { Proceeding } from '../types/proceeding';
 
 interface TimelineProps {
   events: Event[];
@@ -95,11 +71,16 @@ const isDateSpecified = (dateStr: string): boolean => {
   return dateStr && dateStr.toLowerCase() !== 'unspecified';
 };
 
-export default function Timeline({ events, claims, proceedings }: TimelineProps) {
+const Timeline = ({ events, claims, proceedings }: TimelineProps) => {
+  const [isHydrated, setIsHydrated] = useState(false);
   const [selectedEventTypes, setSelectedEventTypes] = useState<Set<Event['event_type']>>(
     new Set()
   );
   const [searchText, setSearchText] = useState('');
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   const eventTypeOptions: Event['event_type'][] = [
     'filing',
@@ -190,6 +171,30 @@ export default function Timeline({ events, claims, proceedings }: TimelineProps)
 
   const totalEvents = sortedEvents.length;
   const allEventsCount = filteredEvents.length;
+
+  if (!isHydrated) {
+    return (
+      <div className="w-full space-y-6 animate-pulse">
+        <div className="h-8 w-40 bg-war-surface2 rounded-sm" />
+        <div className="card space-y-4">
+          <div className="h-10 bg-war-surface2 rounded-sm" />
+          <div className="flex flex-wrap gap-2">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="h-6 w-20 bg-war-surface2 rounded-sm" />
+            ))}
+          </div>
+        </div>
+        <div className="space-y-4">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="flex gap-4">
+              <div className="w-12 h-3 bg-war-surface2 rounded-full" />
+              <div className="flex-1 h-24 bg-war-surface2 rounded-sm" />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full space-y-6">
@@ -409,4 +414,6 @@ export default function Timeline({ events, claims, proceedings }: TimelineProps)
       )}
     </div>
   );
-}
+};
+
+export default Timeline;

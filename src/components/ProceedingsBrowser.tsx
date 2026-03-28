@@ -1,44 +1,8 @@
-import React, { useState, useMemo } from 'react';
-
-interface Claim {
-  id: string;
-  statement: string;
-  claim_status: string;
-  claim_type: string;
-  proceeding_ids: string[];
-  supporting_evidence_ids: string[];
-  contradicting_evidence_ids: string[];
-  [key: string]: any;
-}
-
-interface Evidence {
-  id: string;
-  type: string;
-  source: string;
-  date: string | null;
-  excerpt: string;
-  proceeding_ids: string[];
-  [key: string]: any;
-}
-
-interface Event {
-  id: string;
-  date: string;
-  description: string;
-  event_type: string;
-  proceeding_id: string | null;
-  [key: string]: any;
-}
-
-interface Proceeding {
-  id: string;
-  index_number: string;
-  title: string;
-  court: string;
-  claim_ids: string[];
-  event_ids: string[];
-  evidence_ids: string[];
-}
+import React, { useState, useMemo, useEffect } from 'react';
+import type { Claim } from '../types/claim';
+import type { Evidence } from '../types/evidence';
+import type { Event } from '../types/event';
+import type { Proceeding } from '../types/proceeding';
 
 interface Props {
   proceedings: Proceeding[];
@@ -50,11 +14,16 @@ interface Props {
 type SortKey = 'title' | 'claim_count' | 'recent_event';
 type TabType = 'claims' | 'evidence' | 'events';
 
-export default function ProceedingsBrowser({ proceedings, claims, evidence, events }: Props) {
+const ProceedingsBrowser = ({ proceedings, claims, evidence, events }: Props) => {
   const [searchText, setSearchText] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('title');
   const [expandedProcId, setExpandedProcId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('claims');
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   // Create lookup maps
   const claimsMap = useMemo(() => {
@@ -189,6 +158,23 @@ export default function ProceedingsBrowser({ proceedings, claims, evidence, even
   const truncateText = (text: string, maxChars: number = 150) => {
     return text.length > maxChars ? text.substring(0, maxChars) + '...' : text;
   };
+
+  if (!isHydrated) {
+    return (
+      <div className="p-6 max-w-7xl mx-auto space-y-4 animate-pulse">
+        <div className="h-6 w-56 bg-war-surface2 rounded-sm" />
+        <div className="card space-y-4">
+          <div className="h-10 bg-war-surface2 rounded-sm" />
+          <div className="h-10 bg-war-surface2 rounded-sm" />
+        </div>
+        <div className="space-y-3">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} className="h-28 bg-war-surface2 rounded-sm" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-4">
@@ -498,4 +484,6 @@ export default function ProceedingsBrowser({ proceedings, claims, evidence, even
       </div>
     </div>
   );
-}
+};
+
+export default ProceedingsBrowser;
