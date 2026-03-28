@@ -173,7 +173,7 @@ const maxType = Math.max(...Object.values(typeCounts));
     <div class="card space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="section-title">Recent Events</h2>
-        <a href={`${import.meta.env.BASE_URL}timeline/`} class="text-xxs font-mono text-war-amber hover:text-war-amber/80 uppercase tracking-widest">View Timeline →</a>
+        <a href={`${import.meta.env.BASE_URL}/timeline/`.replace('//', '/')} class="text-xxs font-mono text-war-amber hover:text-war-amber/80 uppercase tracking-widest">View Timeline →</a>
       </div>
       <div class="divide-y divide-war-border/50">
         {recentEvents.map((event: any) => (
