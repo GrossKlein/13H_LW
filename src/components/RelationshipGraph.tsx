@@ -21,11 +21,11 @@ interface Link {
 }
 
 const COLORS = {
-  'claim': '#d4a017',
-  'evidence': '#4a7ab8',
-  'event': '#4aaa9a',
-  'entity': '#3a8a3a',
-  'proceeding': '#c44040',
+  'claim': '#9a7b1a',
+  'evidence': '#2a5a8a',
+  'event': '#2a7a6a',
+  'entity': '#2a6e2a',
+  'proceeding': '#a83232',
 };
 
 const COLOR_CLASSES = {
@@ -248,9 +248,9 @@ const RelationshipGraph = ({
       .enter()
       .append('line')
       .attr('stroke', (d: any) => {
-        if (d.type === 'supporting') return '#3a8a3a';
-        if (d.type === 'contradicting') return '#c44040';
-        return '#5a5850';
+        if (d.type === 'supporting') return '#2a6e2a';
+        if (d.type === 'contradicting') return '#a83232';
+        return '#b0aca4';
       })
       .attr('stroke-width', (d: any) => d.type === 'supporting' || d.type === 'contradicting' ? 2 : 1)
       .attr('stroke-opacity', 0.4);
@@ -357,7 +357,7 @@ const RelationshipGraph = ({
             <div className="h-3 w-32 bg-war-surface2 rounded-sm mx-auto" />
           </div>
         </div>
-        <div className="fixed top-4 right-4 bg-war-surface/90 border border-war-border rounded-lg p-4 w-64 space-y-3">
+        <div className="fixed top-4 right-4 bg-war-surface/95 border border-war-border rounded-lg p-4 w-64 space-y-3">
           {Array.from({ length: 5 }).map((_, i) => (
             <div key={i} className="h-5 bg-war-surface2 rounded-sm" />
           ))}
@@ -375,7 +375,7 @@ const RelationshipGraph = ({
       />
 
       {/* Controls Panel */}
-      <div className="fixed top-4 right-4 bg-war-surface/90 backdrop-blur border border-war-border rounded-lg p-4 max-w-xs space-y-4 z-10 shadow-lg">
+      <div className="fixed top-4 right-4 bg-war-surface/95 backdrop-blur border border-war-border rounded-lg p-4 max-w-xs space-y-4 z-10 shadow-lg">
         <div className="border-b border-war-border pb-3">
           <h3 className="font-semibold text-war-text text-sm mb-3">Node Types</h3>
           <div className="space-y-2">
@@ -436,7 +436,7 @@ const RelationshipGraph = ({
       {/* Tooltip */}
       {tooltip && (
         <div
-          className="fixed bg-war-surface2 border border-war-border rounded px-3 py-2 text-xs max-w-sm z-20 pointer-events-none"
+          className="fixed bg-war-surface border border-war-border rounded px-3 py-2 text-xs max-w-sm z-20 pointer-events-none shadow-md"
           style={{
             left: `${tooltip.x + 10}px`,
             top: `${tooltip.y + 10}px`,

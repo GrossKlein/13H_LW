@@ -1,5 +1,5 @@
 ---
-import SidebarNav from '../components/SidebarNav';
+import HeaderNav from '../components/HeaderNav';
 
 interface Props {
   title: string;
@@ -25,31 +25,44 @@ const navItems = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} — 13H War Room</title>
+    <title>{title} &mdash; 13 Harrison Street</title>
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
   </head>
-  <body class="flex h-screen overflow-hidden">
-    <!-- Sidebar -->
-    <aside class="w-56 flex-shrink-0 bg-war-surface border-r border-war-border flex flex-col">
-      <div class="px-4 py-5 border-b border-war-border">
-        <div class="font-display text-lg text-war-text tracking-tight">13 Harrison St</div>
-        <div class="font-mono text-xxs text-war-text-muted uppercase tracking-widest mt-0.5">Litigation War Room</div>
-      </div>
+  <body class="min-h-screen flex flex-col">
 
-      <SidebarNav items={navItems} activeNav={activeNav} />
-
-      <div class="px-4 py-3 border-t border-war-border">
-        <div class="font-mono text-xxs text-war-text-muted">
-          <div>348 claims · 160 evidence</div>
-          <div>165 events · 38 proceedings</div>
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-war-bg/95 backdrop-blur-sm border-b border-war-text">
+      <div class="max-w-content mx-auto px-8 lg:px-12">
+        <!-- Masthead -->
+        <div class="flex items-center justify-between py-3 border-b border-war-border">
+          <a href={`${base}/`} class="group">
+            <h1 class="font-blackletter text-3xl text-war-text leading-none tracking-wide">13 Harrison Street</h1>
+          </a>
+          <div class="text-right">
+            <div class="font-mono text-xxs text-war-text-muted uppercase tracking-widest">Litigation War Room</div>
+            <div class="font-mono text-xxs text-war-text-muted">348 claims &middot; 160 evidence &middot; 165 events</div>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="py-2">
+          <HeaderNav items={navItems} activeNav={activeNav} />
         </div>
       </div>
-    </aside>
+    </header>
 
     <!-- Main content -->
-    <main class="flex-1 overflow-y-auto">
+    <main class="flex-1">
       <slot />
     </main>
+
+    <!-- Footer rule -->
+    <footer class="border-t border-war-border">
+      <div class="max-w-content mx-auto px-8 lg:px-12 py-4">
+        <div class="font-mono text-xxs text-war-text-muted text-center">
+          13 Harrison Street, TriBeCa &mdash; Litigation Data Pipeline v1.0 &mdash; 38 proceedings
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 

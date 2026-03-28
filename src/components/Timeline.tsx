@@ -25,14 +25,14 @@ const getEventColor = (eventType: Event['event_type']): string => {
 
 const getEventColorValue = (eventType: Event['event_type']): string => {
   const colorMap: Record<Event['event_type'], string> = {
-    filing: '#4a7ab8',
-    ruling: '#d4a017',
-    communication: '#8a8880',
-    inspection: '#4aaa9a',
-    transaction: '#3a8a3a',
-    demand: '#c44040',
-    modification: '#5a5850',
-    obstruction: '#c44040',
+    filing: '#2a5a8a',
+    ruling: '#9a7b1a',
+    communication: '#6a6a6a',
+    inspection: '#2a7a6a',
+    transaction: '#2a6e2a',
+    demand: '#a83232',
+    modification: '#8a8a8a',
+    obstruction: '#a83232',
   };
   return colorMap[eventType];
 };

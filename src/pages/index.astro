@@ -42,63 +42,61 @@ const recentEvents = [...events]
 
 const maxStatus = Math.max(...Object.values(statusCounts));
 const maxType = Math.max(...Object.values(typeCounts));
+
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
 ---
 
 <BaseLayout title="Dashboard" activeNav="dashboard">
-  <div class="p-6 max-w-7xl mx-auto space-y-6">
+  <div class="max-w-content mx-auto px-8 lg:px-12 py-10 space-y-10">
 
-    <!-- Header -->
-    <div class="flex items-end justify-between">
-      <div>
-        <h1 class="font-display text-2xl text-war-text">Litigation Dashboard</h1>
-        <p class="text-war-text-muted text-sm mt-1 font-mono">13 Harrison Street, TriBeCa — Michael Bleich Matter</p>
-      </div>
-      <div class="font-mono text-xxs text-war-text-muted">
-        Pipeline v1.0 · {claims.length}c · {evidence.length}e · {events.length}ev
-      </div>
+    <!-- Headline -->
+    <div class="text-center border-b border-war-border pb-8">
+      <h1 class="font-blackletter text-5xl text-war-text leading-tight">Litigation Dashboard</h1>
+      <p class="font-serif text-war-text-dim text-lg mt-2 italic">13 Harrison Street, TriBeCa &mdash; Michael Bleich Matter</p>
     </div>
 
     <!-- Metrics row -->
-    <div class="grid grid-cols-5 gap-3">
-      <div class="card text-center">
-        <div class="metric-value text-war-text">{claims.length}</div>
+    <div class="grid grid-cols-5 gap-6">
+      <div class="text-center py-4 border-t-2 border-war-text">
+        <div class="metric-value">{claims.length}</div>
         <div class="metric-label">Claims</div>
       </div>
-      <div class="card text-center">
-        <div class="metric-value text-war-text">{evidence.length}</div>
+      <div class="text-center py-4 border-t-2 border-war-text">
+        <div class="metric-value">{evidence.length}</div>
         <div class="metric-label">Evidence</div>
       </div>
-      <div class="card text-center">
-        <div class="metric-value text-war-text">{events.length}</div>
+      <div class="text-center py-4 border-t-2 border-war-text">
+        <div class="metric-value">{events.length}</div>
         <div class="metric-label">Events</div>
       </div>
-      <div class="card text-center">
-        <div class="metric-value text-war-text">{entities.length}</div>
+      <div class="text-center py-4 border-t-2 border-war-text">
+        <div class="metric-value">{entities.length}</div>
         <div class="metric-label">Entities</div>
       </div>
-      <div class="card text-center">
-        <div class="metric-value text-war-text">{proceedings.length}</div>
+      <div class="text-center py-4 border-t-2 border-war-text">
+        <div class="metric-value">{proceedings.length}</div>
         <div class="metric-label">Proceedings</div>
       </div>
     </div>
 
-    <!-- Status + Types row -->
-    <div class="grid grid-cols-2 gap-3">
+    <!-- Status + Types -->
+    <div class="grid grid-cols-2 gap-10">
 
       <!-- Claim Status -->
-      <div class="card space-y-3">
-        <div class="flex items-center justify-between">
-          <h2 class="section-title">Claim Status</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
+          <h2 class="font-display text-xl font-bold">Claim Status</h2>
           <span class="font-mono text-xxs text-war-text-muted">{linkedClaims} linked</span>
         </div>
-        <div class="space-y-2">
+        <div class="space-y-3">
           {Object.entries(statusCounts).map(([status, count]) => (
             <div class="flex items-center gap-3">
               <span class={`badge badge-${status}`}>{status.replace('_', ' ')}</span>
-              <div class="flex-1 h-1.5 bg-war-bg rounded-full overflow-hidden">
+              <div class="flex-1 h-1 bg-war-surface2 overflow-hidden">
                 <div
                   class:list={[
-                    'h-full rounded-full transition-all',
+                    'h-full transition-all',
                     status === 'alleged' && 'bg-war-amber',
                     status === 'supported' && 'bg-war-green',
                     status === 'contradicted' && 'bg-war-red',
@@ -114,17 +112,17 @@ const maxType = Math.max(...Object.values(typeCounts));
       </div>
 
       <!-- Claim Types -->
-      <div class="card space-y-3">
-        <div class="flex items-center justify-between">
-          <h2 class="section-title">Claim Types</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
+          <h2 class="font-display text-xl font-bold">Claim Types</h2>
           <span class="font-mono text-xxs text-war-text-muted">{claims.length} total</span>
         </div>
-        <div class="space-y-2">
+        <div class="space-y-3">
           {Object.entries(typeCounts).map(([type, count]) => (
             <div class="flex items-center gap-3">
               <span class={`badge badge-${type}`}>{type.replace(/_/g, ' ')}</span>
-              <div class="flex-1 h-1.5 bg-war-bg rounded-full overflow-hidden">
-                <div class="h-full rounded-full bg-war-text/20" style={`width: ${(count / maxType) * 100}%`} />
+              <div class="flex-1 h-1 bg-war-surface2 overflow-hidden">
+                <div class="h-full bg-war-text/20" style={`width: ${(count / maxType) * 100}%`} />
               </div>
               <span class="font-mono text-sm text-war-text-dim w-8 text-right">{count}</span>
             </div>
@@ -134,55 +132,52 @@ const maxType = Math.max(...Object.values(typeCounts));
     </div>
 
     <!-- Evidence + Events breakdown -->
-    <div class="grid grid-cols-2 gap-3">
-
-      <!-- Evidence by type -->
-      <div class="card space-y-3">
-        <h2 class="section-title">Evidence Breakdown</h2>
-        <div class="grid grid-cols-3 gap-2">
+    <div class="grid grid-cols-2 gap-10">
+      <div class="space-y-4">
+        <h2 class="font-display text-xl font-bold border-b-2 border-war-text pb-2">Evidence Breakdown</h2>
+        <div class="grid grid-cols-3 gap-3">
           {Object.entries(evidenceTypeCounts).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
-            <div class="bg-war-bg rounded-sm px-3 py-2">
-              <div class="font-mono text-lg text-war-text">{count}</div>
+            <div class="border border-war-border p-3">
+              <div class="font-serif text-2xl font-bold text-war-text">{count}</div>
               <div class="text-xxs font-mono text-war-text-muted uppercase">{type.replace(/_/g, ' ')}</div>
             </div>
           ))}
         </div>
-        <div class="text-xxs text-war-text-muted font-mono pt-1">
+        <div class="text-xxs text-war-text-muted font-mono">
           {linkedEvidence} of {evidence.length} items linked to claims
         </div>
       </div>
 
-      <!-- Events by type -->
-      <div class="card space-y-3">
-        <h2 class="section-title">Event Breakdown</h2>
-        <div class="grid grid-cols-3 gap-2">
+      <div class="space-y-4">
+        <h2 class="font-display text-xl font-bold border-b-2 border-war-text pb-2">Event Breakdown</h2>
+        <div class="grid grid-cols-3 gap-3">
           {Object.entries(eventTypeCounts).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
-            <div class="bg-war-bg rounded-sm px-3 py-2">
-              <div class="font-mono text-lg text-war-text">{count}</div>
+            <div class="border border-war-border p-3">
+              <div class="font-serif text-2xl font-bold text-war-text">{count}</div>
               <div class="text-xxs font-mono text-war-text-muted uppercase">{type.replace(/_/g, ' ')}</div>
             </div>
           ))}
         </div>
-        <div class="text-xxs text-war-text-muted font-mono pt-1">
+        <div class="text-xxs text-war-text-muted font-mono">
           {linkedEvents} of {events.length} events with relationship links
         </div>
       </div>
     </div>
 
     <!-- Recent events -->
-    <div class="card space-y-3">
-      <div class="flex items-center justify-between">
-        <h2 class="section-title">Recent Events</h2>
-        <a href={`${import.meta.env.BASE_URL}/timeline/`.replace('//', '/')} class="text-xxs font-mono text-war-amber hover:text-war-amber/80 uppercase tracking-widest">View Timeline →</a>
+    <div class="space-y-4">
+      <div class="flex items-center justify-between border-b-2 border-war-text pb-2">
+        <h2 class="font-display text-xl font-bold">Recent Events</h2>
+        <a href={`${base}/timeline/`} class="text-xxs font-mono text-war-text-dim hover:text-war-text uppercase tracking-widest">View Timeline &rarr;</a>
       </div>
-      <div class="divide-y divide-war-border/50">
+      <div class="divide-y divide-war-border">
         {recentEvents.map((event: any) => (
-          <div class="flex items-start gap-4 py-2.5">
+          <div class="flex items-start gap-4 py-3">
             <span class="font-mono text-xxs text-war-text-muted whitespace-nowrap pt-0.5">{event.date}</span>
             <span class={`badge badge-${event.event_type === 'filing' ? 'factual_assertion' : event.event_type === 'ruling' ? 'judicially_addressed' : event.event_type === 'obstruction' ? 'contradicted' : 'alleged'}`}>
               {event.event_type}
             </span>
-            <span class="text-sm text-war-text-dim flex-1">{event.description.length > 120 ? event.description.slice(0, 120) + '...' : event.description}</span>
+            <span class="text-sm text-war-text-dim flex-1 font-serif">{event.description.length > 120 ? event.description.slice(0, 120) + '\u2026' : event.description}</span>
             <span class="font-mono text-xxs text-war-text-muted">{event.id}</span>
           </div>
         ))}

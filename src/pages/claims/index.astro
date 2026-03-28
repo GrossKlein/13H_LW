@@ -6,5 +6,7 @@ import evidence from '../../data/evidence.json';
 ---
 
 <BaseLayout title="Claims" activeNav="claims">
-  <ClaimsBrowser client:load {claims} {evidence} />
+  <div class="max-w-content mx-auto px-8 lg:px-12 py-10">
+    <ClaimsBrowser client:load {claims} {evidence} />
+  </div>
 </BaseLayout>

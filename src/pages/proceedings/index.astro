@@ -8,5 +8,7 @@ import events from '../../data/events.json';
 ---
 
 <BaseLayout title="Proceedings" activeNav="proceedings">
-  <ProceedingsBrowser client:load {proceedings} {claims} {evidence} {events} />
+  <div class="max-w-content mx-auto px-8 lg:px-12 py-10">
+    <ProceedingsBrowser client:load {proceedings} {claims} {evidence} {events} />
+  </div>
 </BaseLayout>
