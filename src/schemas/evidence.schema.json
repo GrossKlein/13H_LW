@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": ["email", "deposition", "pleading", "affidavit", "expert_report", "photograph", "video", "court_order", "correspondence"]
+    },
+    "source": {
+      "type": "string"
+    },
+    "date": {
+      "type": ["string", "null"]
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "full_reference": {
+      "type": ["string", "null"]
+    },
+    "proceeding_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "string"
+    },
+    "reliability_level": {
+      "enum": ["primary_record", "sworn_statement", "secondary_reference", "internal_note"]
+    },
+    "notes_internal": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["id", "type", "source", "date", "excerpt", "full_reference", "proceeding_ids", "related_claim_ids", "related_event_ids", "provenance", "reliability_level", "notes_internal"],
+  "additionalProperties": false
+}

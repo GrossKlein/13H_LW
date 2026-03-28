@@ -1,0 +1,398 @@
+[
+  {
+    "id": "proc-0001",
+    "index_number": "152171/2026",
+    "title": "The Enhanced Complaint and the Multi-Front Offensive",
+    "court": "Index No. 152171/2026 (Justice Roth)",
+    "claim_ids": [],
+    "event_ids": [
+      "event-0105"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0002",
+    "index_number": "155721/2024",
+    "title": "Injunction action: Michael and Alexis Bleich v. Board of Managers of 13 Harrison Street Condominium et al.",
+    "court": "New York County Supreme Court, Part 33; Justice Mary V. Rosado presiding",
+    "claim_ids": [
+      "claim-0295",
+      "claim-0296",
+      "claim-0297",
+      "claim-0298",
+      "claim-0299",
+      "claim-0300",
+      "claim-0301",
+      "claim-0302",
+      "claim-0324",
+      "claim-0325",
+      "claim-0326",
+      "claim-0327",
+      "claim-0328",
+      "claim-0329",
+      "claim-0330",
+      "claim-0331"
+    ],
+    "event_ids": [
+      "event-0048",
+      "event-0100",
+      "event-0133"
+    ],
+    "evidence_ids": [
+      "evidence-0156"
+    ]
+  },
+  {
+    "id": "proc-0003",
+    "index_number": "166679/2025",
+    "title": "The Cellar Restraint and the $8 Million Demand",
+    "court": "Index No. 166679/2025 (Justice Judy H. Kim)",
+    "claim_ids": [],
+    "event_ids": [
+      "event-0103"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0004",
+    "index_number": "651188/2019",
+    "title": "Governance dispute action: Board of Managers and 13 Harrison LLC v. Michael and Alexis Bleich",
+    "court": "Commercial Division of New York County Supreme Court",
+    "claim_ids": [
+      "claim-0167",
+      "claim-0168",
+      "claim-0169",
+      "claim-0170",
+      "claim-0287",
+      "claim-0288",
+      "claim-0289",
+      "claim-0290",
+      "claim-0291",
+      "claim-0292",
+      "claim-0293",
+      "claim-0294",
+      "claim-0316",
+      "claim-0317",
+      "claim-0318",
+      "claim-0319",
+      "claim-0320",
+      "claim-0321",
+      "claim-0322",
+      "claim-0323"
+    ],
+    "event_ids": [
+      "event-0039",
+      "event-0097",
+      "event-0142"
+    ],
+    "evidence_ids": [
+      "evidence-0155"
+    ]
+  },
+  {
+    "id": "proc-0005",
+    "index_number": "unspecified_index_number",
+    "title": "2024 injunction proceedings",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0006",
+    "index_number": "unspecified_index_number",
+    "title": "2024 litigation",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0007",
+    "index_number": "unspecified_index_number",
+    "title": "2024 proceedings before court",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0008",
+    "index_number": "unspecified_index_number",
+    "title": "2025–2026 Extortion and Continuing Fraud",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0009",
+    "index_number": "unspecified_index_number",
+    "title": "Anti-SLAPP Motion (Civil Rights Law §76-a)",
+    "court": "NY County Supreme Court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0010",
+    "index_number": "unspecified_index_number",
+    "title": "Anti-SLAPP motion",
+    "court": "New York Supreme Court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0011",
+    "index_number": "unspecified_index_number",
+    "title": "Attorney General investigation - Real Estate Finance Bureau",
+    "court": "NY Attorney General",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0012",
+    "index_number": "unspecified_index_number",
+    "title": "Attorney discipline referral - Lynn E. Judell",
+    "court": "New York Attorney Grievance Committee",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0013",
+    "index_number": "unspecified_index_number",
+    "title": "Bleich litigation",
+    "court": "State of New York",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0014",
+    "index_number": "unspecified_index_number",
+    "title": "Bleich litigation - deposition of David Kornmeier",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0015",
+    "index_number": "unspecified_index_number",
+    "title": "Civil CPLR §6314/§5015(a)(3) motion",
+    "court": "Court overseeing 13 Harrison Street condo dispute",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0016",
+    "index_number": "unspecified_index_number",
+    "title": "Civil deposition with Fifth Amendment defense anticipated",
+    "court": "Civil action jurisdiction",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0017",
+    "index_number": "unspecified_index_number",
+    "title": "Civil litigation regarding 13 Harrison Street Condominium",
+    "court": "New York Supreme Court (implied by reference to Justice Rosado and CPLR procedure)",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0018",
+    "index_number": "unspecified_index_number",
+    "title": "Court referral to District Attorney",
+    "court": "Court of jurisdiction (Justice Rosado)",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0019",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal case against Michael Bleich (anticipated/proposed referral)",
+    "court": "State/Federal court (not yet filed; anticipated prosecution)",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0020",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal referral - Manhattan DA Rackets Bureau",
+    "court": "Manhattan District Attorney",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0021",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal referral - NY Attorney General Real Estate Finance Bureau",
+    "court": "New York Attorney General",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0022",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal referral - NYPD Financial Crimes Task Force",
+    "court": "NYPD, 1st Precinct / 1 Police Plaza",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0023",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal referral - Rackets Bureau",
+    "court": "Manhattan District Attorney",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0024",
+    "index_number": "unspecified_index_number",
+    "title": "Criminal referral to Manhattan DA",
+    "court": "Manhattan District Attorney",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0025",
+    "index_number": "unspecified_index_number",
+    "title": "Disciplinary Grievance - Robert Giacovas",
+    "court": "NY State Judicial Conduct Commission",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0026",
+    "index_number": "unspecified_index_number",
+    "title": "Disciplinary Referral - Lynn E. Judell",
+    "court": "NY Attorney Grievance Committee",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0027",
+    "index_number": "unspecified_index_number",
+    "title": "District Attorney investigation (criminal referral from civil court)",
+    "court": "Manhattan DA's Office, Rackets Bureau",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0028",
+    "index_number": "unspecified_index_number",
+    "title": "FINRA and NASDAQ enforcement action against Scout Trading, LLC",
+    "court": "FINRA and NASDAQ regulatory bodies",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0029",
+    "index_number": "unspecified_index_number",
+    "title": "Four active proceedings",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0030",
+    "index_number": "unspecified_index_number",
+    "title": "Judicial Conduct Commission disciplinary grievance",
+    "court": "NY State Judicial System",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0031",
+    "index_number": "unspecified_index_number",
+    "title": "Judiciary Law §487 Plenary Action",
+    "court": "NY County Supreme Court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0032",
+    "index_number": "unspecified_index_number",
+    "title": "Judiciary Law §487 plenary action",
+    "court": "New York Supreme Court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0033",
+    "index_number": "unspecified_index_number",
+    "title": "Medifast v. Coenen/Minkow",
+    "court": "U.S. District Court - California",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0034",
+    "index_number": "unspecified_index_number",
+    "title": "Medifast, Inc. defamation lawsuit",
+    "court": "U.S. District Court (California); Judge Janis Sammartino",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0035",
+    "index_number": "unspecified_index_number",
+    "title": "Motion to Vacate preliminary injunction",
+    "court": "New York Supreme Court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0036",
+    "index_number": "unspecified_index_number",
+    "title": "NYPD investigation - Financial Crimes Task Force",
+    "court": "NYPD/1st Precinct",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0037",
+    "index_number": "unspecified_index_number",
+    "title": "Scout Trading FINRA enforcement",
+    "court": "FINRA/NASDAQ",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  },
+  {
+    "id": "proc-0038",
+    "index_number": "unspecified_index_number",
+    "title": "Unit 2 Owner vs. Bleich - Governance and Building Control Dispute",
+    "court": "unspecified_court",
+    "claim_ids": [],
+    "event_ids": [],
+    "evidence_ids": []
+  }
+]

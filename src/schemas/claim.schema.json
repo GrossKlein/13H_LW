@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "asserted_by": {
+      "type": "string"
+    },
+    "asserted_in": {
+      "type": "string"
+    },
+    "proceeding_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claim_type": {
+      "enum": ["factual_assertion", "legal_position", "sworn_statement", "allegation", "expert_opinion"]
+    },
+    "claim_status": {
+      "enum": ["alleged", "supported", "contradicted", "judicially_addressed"]
+    },
+    "contradiction_type": {
+      "type": ["string", "null"]
+    },
+    "supporting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradicting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "judicial_treatment": {
+      "type": ["string", "null"]
+    },
+    "legal_significance": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": ["unreviewed", "analyst_validated", "litigation_ready"]
+    },
+    "notes_internal": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["id", "statement", "asserted_by", "asserted_in", "proceeding_ids", "claim_type", "claim_status", "contradiction_type", "supporting_evidence_ids", "contradicting_evidence_ids", "related_event_ids", "judicial_treatment", "legal_significance", "review_status", "notes_internal"],
+  "additionalProperties": false
+}

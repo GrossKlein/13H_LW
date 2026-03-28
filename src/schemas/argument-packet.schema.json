@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ArgumentPacket",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "string"
+    },
+    "thesis": {
+      "type": "string"
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradiction_map": {
+      "type": "string"
+    },
+    "timeline_support": {
+      "type": "string"
+    },
+    "legal_hooks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weaknesses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "export_format": {
+      "enum": ["structured_packet", "narrative"]
+    }
+  },
+  "required": ["id", "issue", "thesis", "claim_ids", "evidence_ids", "event_ids", "contradiction_map", "timeline_support", "legal_hooks", "weaknesses", "export_format"],
+  "additionalProperties": false
+}
