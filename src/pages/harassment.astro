@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Harassment Evidence" activeNav="harassment">
-  <SlideProgress client:load totalSlides={25} />
+  <SlideProgress client:load />
 
   <div class="p-6 max-w-5xl mx-auto">
 
@@ -15,19 +15,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       Privileged &amp; Confidential &mdash; Attorney Work Product
     </div>
 
-    <!-- Section Jump Nav -->
-    <nav class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
-      <a href="#s1" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Title</a>
-      <a href="#s2" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Floor Plans</a>
-      <a href="#s4" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Timeline</a>
-      <a href="#s6" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Evidence</a>
-      <a href="#s7" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">C of O</a>
-      <a href="#s8" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Sq Ft Fraud</a>
-      <a href="#s9" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Compass</a>
-      <a href="#s11" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Grayloftus</a>
-      <a href="#s13" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">StreetEasy</a>
-      <a href="#s19" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">BHS</a>
-      <a href="#s22" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Analysis</a>
+    <!-- Section Jump Nav (populated by SlideProgress) -->
+    <nav id="section-nav" class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
     </nav>
 
     <!-- ===================== SLIDE 1: Title / Hero ===================== -->
@@ -54,7 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s2" data-slide="2" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">02</span>
-        <h2 class="section-title">Compass Floor Plan — Lower Level</h2>
+        <h3 class="section-title">Compass Floor Plan — Lower Level</h3>
       </div>
       <p class="text-sm text-war-text-dim mb-4">As advertised on Real Estate Brokerage site</p>
       <EvidenceExhibit
@@ -69,7 +58,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s3" data-slide="3" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">03</span>
-        <h2 class="section-title">Compass Floor Plan — Upper Level</h2>
+        <h3 class="section-title">Compass Floor Plan — Upper Level</h3>
       </div>
       <p class="text-sm text-war-text-dim mb-4">As advertised on Real Estate Brokerage site</p>
       <EvidenceExhibit
@@ -83,7 +72,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s4" data-slide="4" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-6">
         <span class="font-mono text-xxs text-war-text-muted">04</span>
-        <h2 class="section-title">13 Harrison Timeline</h2>
+        <h3 class="section-title">13 Harrison Timeline</h3>
         <span class="font-mono text-xxs text-war-text-muted ml-auto">Complete Forensic Chronology &amp; Evidence Map</span>
       </div>
 
@@ -233,7 +222,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <!-- ===================== SLIDE 5: Section Divider ===================== -->
     <section id="s5" data-slide="5" class="py-16 border-b border-war-border/30">
       <div class="text-center">
-        <h2 class="font-display text-2xl text-war-amber tracking-tight">13 Harrison Unit 1</h2>
+        <h3 class="font-display text-2xl text-war-amber tracking-tight">13 Harrison Unit 1</h3>
         <p class="font-display text-xl text-war-text-dim mt-2 italic">Real Estate Listings</p>
       </div>
     </section>
@@ -242,7 +231,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s6" data-slide="6" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-6">
         <span class="font-mono text-xxs text-war-text-muted">06</span>
-        <h2 class="section-title">Summary — Bleich Actions</h2>
+        <h3 class="section-title">Summary — Bleich Actions</h3>
         <span class="badge badge-contradicted ml-auto">Evidence of Systematic Fraud &amp; Obstruction</span>
       </div>
 
@@ -332,7 +321,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s7" data-slide="7" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">07</span>
-        <h2 class="section-title">Certificate of Occupancy</h2>
+        <h3 class="section-title">Certificate of Occupancy</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div>
@@ -367,7 +356,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s8" data-slide="8" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">08</span>
-        <h2 class="section-title">Comparison Table — Listing vs. DOB C of O</h2>
+        <h3 class="section-title">Comparison Table — Listing vs. DOB C of O</h3>
       </div>
       <div class="bg-war-surface2 border border-war-red/20 rounded-sm p-3 mb-4">
         <span class="badge badge-contradicted">Square Footage Fraud</span>
@@ -425,7 +414,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s9" data-slide="9" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">09</span>
-        <h2 class="section-title">Compass Listing — Floor Plan</h2>
+        <h3 class="section-title">Compass Listing — Floor Plan</h3>
       </div>
       <EvidenceExhibit
         src="harassment/slide-09-compass-floorplan.webp"
@@ -442,7 +431,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s10" data-slide="10" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">10</span>
-        <h2 class="section-title">Compass Listing — Property Page</h2>
+        <h3 class="section-title">Compass Listing — Property Page</h3>
       </div>
       <EvidenceExhibit
         src="harassment/slide-10-compass-listing.webp"
@@ -456,7 +445,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s11" data-slide="11" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">11</span>
-        <h2 class="section-title">Grayloftus Listing</h2>
+        <h3 class="section-title">Grayloftus Listing</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -479,7 +468,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s12" data-slide="12" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">12</span>
-        <h2 class="section-title">Grayloftus Listing — Marketing Copy</h2>
+        <h3 class="section-title">Grayloftus Listing — Marketing Copy</h3>
       </div>
       <div class="bg-war-surface2 border-l-2 border-war-amber p-6 rounded-sm">
         <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-4">As Marketed</div>
@@ -496,7 +485,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s13" data-slide="13" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">13</span>
-        <h2 class="section-title">StreetEasy Listing — Floor Plan Fraud</h2>
+        <h3 class="section-title">StreetEasy Listing — Floor Plan Fraud</h3>
       </div>
       <div class="bg-war-surface2 border-l-2 border-war-red p-4 rounded-sm mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Evidence</div>
@@ -517,7 +506,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s14" data-slide="14" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">14</span>
-        <h2 class="section-title">Euphemism Detection: "Sleeping Area" as Code Circumvention</h2>
+        <h3 class="section-title">Euphemism Detection: "Sleeping Area" as Code Circumvention</h3>
       </div>
       <div class="bg-war-surface2 border-l-2 border-war-amber p-4 rounded-sm mb-4">
         <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Legal Analysis</div>
@@ -534,7 +523,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s15" data-slide="15" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">15</span>
-        <h2 class="section-title">StreetEasy Listing — Property Page</h2>
+        <h3 class="section-title">StreetEasy Listing — Property Page</h3>
       </div>
       <EvidenceExhibit
         src="harassment/slide-15-streeteasy-listing.webp"
@@ -547,7 +536,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s16" data-slide="16" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">16</span>
-        <h2 class="section-title">StreetEasy Listing — Additional Evidence</h2>
+        <h3 class="section-title">StreetEasy Listing — Additional Evidence</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -567,7 +556,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s17" data-slide="17" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">17</span>
-        <h2 class="section-title">StreetEasy Listing — Detail Views</h2>
+        <h3 class="section-title">StreetEasy Listing — Detail Views</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -587,7 +576,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s18" data-slide="18" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">18</span>
-        <h2 class="section-title">StreetEasy Listing — Property Photos</h2>
+        <h3 class="section-title">StreetEasy Listing — Property Photos</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -607,7 +596,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s19" data-slide="19" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">19</span>
-        <h2 class="section-title">Brown Harris Stevens Listing</h2>
+        <h3 class="section-title">Brown Harris Stevens Listing</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -645,7 +634,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s20" data-slide="20" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">20</span>
-        <h2 class="section-title">Brown Harris Stevens — Evolution of the Euphemism</h2>
+        <h3 class="section-title">Brown Harris Stevens — Evolution of the Euphemism</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit
@@ -678,7 +667,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s21" data-slide="21" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">21</span>
-        <h2 class="section-title">Brown Harris Stevens — Property Photos</h2>
+        <h3 class="section-title">Brown Harris Stevens — Property Photos</h3>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-3">
         <EvidenceExhibit
@@ -715,7 +704,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s22" data-slide="22" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">22</span>
-        <h2 class="section-title">Property Listing Timeline</h2>
+        <h3 class="section-title">Property Listing Timeline</h3>
       </div>
       <EvidenceExhibit
         src="harassment/slide-22-property-timeline.webp"
@@ -729,7 +718,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s23" data-slide="23" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">23</span>
-        <h2 class="section-title">Property Unit 1 and Unit 2 Discussion</h2>
+        <h3 class="section-title">Property Unit 1 and Unit 2 Discussion</h3>
       </div>
       <div class="grid grid-cols-3 gap-3">
         <EvidenceExhibit
@@ -754,7 +743,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s24" data-slide="24" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">24</span>
-        <h2 class="section-title">Property Metrics and Cluster Analysis</h2>
+        <h3 class="section-title">Property Metrics and Cluster Analysis</h3>
       </div>
       <div class="space-y-4">
         <EvidenceExhibit
@@ -775,7 +764,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section id="s25" data-slide="25" class="py-10">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">25</span>
-        <h2 class="section-title">Property Correlational Event Analysis</h2>
+        <h3 class="section-title">Property Correlational Event Analysis</h3>
       </div>
       <EvidenceExhibit
         src="harassment/slide-25-correlational-analysis.webp"

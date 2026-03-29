@@ -7,7 +7,7 @@ const imgBase = 'roof-damages';
 ---
 
 <BaseLayout title="Roof Leak Damages" activeNav="roof-damages">
-  <SlideProgress client:load totalSlides={29} />
+  <SlideProgress client:load />
 
   <div class="p-6 max-w-5xl mx-auto">
 
@@ -16,20 +16,8 @@ const imgBase = 'roof-damages';
       Privileged &amp; Confidential &mdash; Attorney Work Product
     </div>
 
-    <!-- Section Jump Nav -->
-    <nav class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
-      <a href="#s1" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Title</a>
-      <a href="#s2" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Roof Plans</a>
-      <a href="#s3" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Cracks</a>
-      <a href="#s6" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Expert Reports</a>
-      <a href="#s9" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Emergency Sealing</a>
-      <a href="#s11" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Atrium</a>
-      <a href="#s14" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Interior</a>
-      <a href="#s16" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Living Room</a>
-      <a href="#s18" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Kitchen</a>
-      <a href="#s22" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">5th Floor</a>
-      <a href="#s23" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Cost Summary</a>
-      <a href="#s25" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Project Reports</a>
+    <!-- Section Jump Nav (populated by SlideProgress) -->
+    <nav id="section-nav" class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
     </nav>
 
     <!-- ===================== SLIDE 1: Title ===================== -->
@@ -57,7 +45,7 @@ const imgBase = 'roof-damages';
     <section id="s2" data-slide="2" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">02</span>
-        <h2 class="section-title">Roof Plans — Overview</h2>
+        <h3 class="section-title">Roof Plans — Overview</h3>
         <span class="font-mono text-xxs text-war-text-muted ml-auto">5th Floor Roof</span>
       </div>
       <div class="grid grid-cols-3 gap-4">
@@ -84,7 +72,7 @@ const imgBase = 'roof-damages';
     <section id="s3" data-slide="3" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">03</span>
-        <h2 class="section-title">Unfinished Roof &amp; Cracks</h2>
+        <h3 class="section-title">Unfinished Roof &amp; Cracks</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <ul class="text-sm text-war-text-dim space-y-1">
@@ -106,7 +94,7 @@ const imgBase = 'roof-damages';
     <section id="s4" data-slide="4" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">04</span>
-        <h2 class="section-title">Unfinished Roof &amp; Cracks — Detail</h2>
+        <h3 class="section-title">Unfinished Roof &amp; Cracks — Detail</h3>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-3">
         <EvidenceExhibit src="roof-damages/slide-04-membrane-damage.webp" alt="Damaged roof membrane showing deterioration and holes" label="Membrane Damage" />
@@ -123,7 +111,7 @@ const imgBase = 'roof-damages';
     <section id="s5" data-slide="5" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">05</span>
-        <h2 class="section-title">Unfinished Roof &amp; Rotten Wood Screen</h2>
+        <h3 class="section-title">Unfinished Roof &amp; Rotten Wood Screen</h3>
       </div>
       <div class="bg-war-amber/5 border border-war-amber/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Emergency Safety Measure</div>
@@ -144,7 +132,7 @@ const imgBase = 'roof-damages';
     <section id="s6" data-slide="6" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">06</span>
-        <h2 class="section-title">Evidence Report — Court Expert (Bleich)</h2>
+        <h3 class="section-title">Evidence Report — Court Expert (Bleich)</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit src="roof-damages/slide-06-expert-report-1.webp" alt="Court expert report representing Michael Bleich — page 1" label="Expert Report — Page 1" />
@@ -156,7 +144,7 @@ const imgBase = 'roof-damages';
     <section id="s7" data-slide="7" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">07</span>
-        <h2 class="section-title">MEP Expert Report (HZLAE) — Defective Roof Leaking</h2>
+        <h3 class="section-title">MEP Expert Report (HZLAE) — Defective Roof Leaking</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit src="roof-damages/slide-07-mep-report-1.webp" alt="MEP expert report by HZLAE — page 1" label="MEP Report — Page 1" />
@@ -168,7 +156,7 @@ const imgBase = 'roof-damages';
     <section id="s8" data-slide="8" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">08</span>
-        <h2 class="section-title">MEP Expert Report (HZLAE) — Continued</h2>
+        <h3 class="section-title">MEP Expert Report (HZLAE) — Continued</h3>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <EvidenceExhibit src="roof-damages/slide-08-mep-report-3.webp" alt="MEP expert report — page 3" label="MEP Report — Page 3" />
@@ -180,7 +168,7 @@ const imgBase = 'roof-damages';
     <section id="s9" data-slide="9" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">09</span>
-        <h2 class="section-title">Unfinished Roof &amp; Cracks — Emergency Temporary Sealing</h2>
+        <h3 class="section-title">Unfinished Roof &amp; Cracks — Emergency Temporary Sealing</h3>
       </div>
       <div class="bg-war-amber/5 border border-war-amber/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Emergency Temporary Sealing</div>
@@ -204,7 +192,7 @@ const imgBase = 'roof-damages';
     <section id="s10" data-slide="10" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">10</span>
-        <h2 class="section-title">Unfinished Roof &amp; Extreme Exposure Decay</h2>
+        <h3 class="section-title">Unfinished Roof &amp; Extreme Exposure Decay</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Membrane</div>
@@ -229,7 +217,7 @@ const imgBase = 'roof-damages';
     <section id="s11" data-slide="11" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">11</span>
-        <h2 class="section-title">Atrium Decay — Glass Structure</h2>
+        <h3 class="section-title">Atrium Decay — Glass Structure</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Glass Systems</div>
@@ -251,7 +239,7 @@ const imgBase = 'roof-damages';
     <section id="s12" data-slide="12" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">12</span>
-        <h2 class="section-title">Atrium Decay — Additional Photos</h2>
+        <h3 class="section-title">Atrium Decay — Additional Photos</h3>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-3">
         <EvidenceExhibit src="roof-damages/slide-12-atrium-4.webp" alt="Atrium decay photo" label="Atrium 4" />
@@ -269,7 +257,7 @@ const imgBase = 'roof-damages';
     <section id="s13" data-slide="13" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">13</span>
-        <h2 class="section-title">Exposed Electrical Wiring &amp; Damaged Door</h2>
+        <h3 class="section-title">Exposed Electrical Wiring &amp; Damaged Door</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Membrane</div>
@@ -293,7 +281,7 @@ const imgBase = 'roof-damages';
     <!-- ===================== SLIDE 14: Interior Damages Divider ===================== -->
     <section id="s14" data-slide="14" class="py-16 border-b border-war-border/30">
       <div class="text-center">
-        <h2 class="font-display text-2xl text-war-amber tracking-tight">Interior Damages</h2>
+        <h3 class="font-display text-2xl text-war-amber tracking-tight">Interior Damages</h3>
         <p class="font-display text-xl text-war-text-dim mt-2 italic">Unit 2 — Floor 4th &amp; 5th</p>
       </div>
     </section>
@@ -302,7 +290,7 @@ const imgBase = 'roof-damages';
     <section id="s15" data-slide="15" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">15</span>
-        <h2 class="section-title">Floor Plan — Unit 2</h2>
+        <h3 class="section-title">Floor Plan — Unit 2</h3>
       </div>
       <p class="text-sm text-war-text-dim mb-4">4th floor plan — Damaged floor due to water infiltration from 5th fl roof</p>
       <EvidenceExhibit
@@ -317,7 +305,7 @@ const imgBase = 'roof-damages';
     <section id="s16" data-slide="16" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">16</span>
-        <h2 class="section-title">4th Floor — Living Room Water Damage</h2>
+        <h3 class="section-title">4th Floor — Living Room Water Damage</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
@@ -343,7 +331,7 @@ const imgBase = 'roof-damages';
     <section id="s17" data-slide="17" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">17</span>
-        <h2 class="section-title">4th Floor — Living Room — Additional Photos</h2>
+        <h3 class="section-title">4th Floor — Living Room — Additional Photos</h3>
       </div>
       <div class="grid grid-cols-2 gap-3 mb-3">
         <EvidenceExhibit src="roof-damages/slide-17-living-6.webp" alt="Living room damage detail" label="Living Room 6" />
@@ -359,7 +347,7 @@ const imgBase = 'roof-damages';
     <section id="s18" data-slide="18" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">18</span>
-        <h2 class="section-title">4th Floor — Pantry Water Damage</h2>
+        <h3 class="section-title">4th Floor — Pantry Water Damage</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
@@ -383,7 +371,7 @@ const imgBase = 'roof-damages';
     <section id="s19" data-slide="19" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">19</span>
-        <h2 class="section-title">4th Floor — Kitchen/Dining Water Damage</h2>
+        <h3 class="section-title">4th Floor — Kitchen/Dining Water Damage</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
@@ -411,7 +399,7 @@ const imgBase = 'roof-damages';
     <section id="s20" data-slide="20" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">20</span>
-        <h2 class="section-title">4th Floor — Kitchen/Dining — Additional Photos</h2>
+        <h3 class="section-title">4th Floor — Kitchen/Dining — Additional Photos</h3>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-3">
         <EvidenceExhibit src="roof-damages/slide-20-kitchen-6.webp" alt="Kitchen damage detail" label="Kitchen 6" />
@@ -428,7 +416,7 @@ const imgBase = 'roof-damages';
     <section id="s21" data-slide="21" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">21</span>
-        <h2 class="section-title">4th Floor — Kitchen/Dining — Further Evidence</h2>
+        <h3 class="section-title">4th Floor — Kitchen/Dining — Further Evidence</h3>
       </div>
       <div class="grid grid-cols-2 gap-3">
         <EvidenceExhibit src="roof-damages/slide-21-kitchen-11.webp" alt="Kitchen damage" label="Kitchen 11" />
@@ -440,7 +428,7 @@ const imgBase = 'roof-damages';
     <section id="s22" data-slide="22" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">22</span>
-        <h2 class="section-title">5th Floor Ceiling Water Damages — Below Bulkhead</h2>
+        <h3 class="section-title">5th Floor Ceiling Water Damages — Below Bulkhead</h3>
       </div>
       <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
         <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
@@ -467,7 +455,7 @@ const imgBase = 'roof-damages';
     <section id="s23" data-slide="23" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-6">
         <span class="font-mono text-xxs text-war-text-muted">23</span>
-        <h2 class="section-title">4th and 5th Floor Water Damages — Cost Summary</h2>
+        <h3 class="section-title">4th and 5th Floor Water Damages — Cost Summary</h3>
       </div>
 
       <!-- Cost breakdown table -->
@@ -538,7 +526,7 @@ const imgBase = 'roof-damages';
     <section id="s24" data-slide="24" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">24</span>
-        <h2 class="section-title">Unit 2's Work Approval for Roof Work</h2>
+        <h3 class="section-title">Unit 2's Work Approval for Roof Work</h3>
       </div>
       <EvidenceExhibit
         src="roof-damages/slide-24-work-approval.webp"
@@ -551,7 +539,7 @@ const imgBase = 'roof-damages';
     <section id="s25" data-slide="25" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">25</span>
-        <h2 class="section-title">Roof Repair Project Report</h2>
+        <h3 class="section-title">Roof Repair Project Report</h3>
       </div>
 
       <div class="card space-y-4 mb-4">
@@ -593,7 +581,7 @@ const imgBase = 'roof-damages';
     <section id="s26" data-slide="26" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">26</span>
-        <h2 class="section-title">Timeline of Discussions with ERPM Co. &amp; Approvals</h2>
+        <h3 class="section-title">Timeline of Discussions with ERPM Co. &amp; Approvals</h3>
       </div>
 
       <div class="space-y-4 border-l-2 border-war-amber/30 ml-4 pl-6">
@@ -659,7 +647,7 @@ const imgBase = 'roof-damages';
     <section id="s27" data-slide="27" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">27</span>
-        <h2 class="section-title">2023 Roof Repair Project Report</h2>
+        <h3 class="section-title">2023 Roof Repair Project Report</h3>
       </div>
 
       <div class="card space-y-3 mb-4">
@@ -742,7 +730,7 @@ const imgBase = 'roof-damages';
     <section id="s28" data-slide="28" class="py-10 border-b border-war-border/30">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">28</span>
-        <h2 class="section-title">2022 Roof Repair Project Report</h2>
+        <h3 class="section-title">2022 Roof Repair Project Report</h3>
       </div>
 
       <div class="card space-y-3 mb-4">
@@ -834,7 +822,7 @@ const imgBase = 'roof-damages';
     <section id="s29" data-slide="29" class="py-10">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono text-xxs text-war-text-muted">29</span>
-        <h2 class="section-title">Roof Repair Project Report — Phase Summary</h2>
+        <h3 class="section-title">Roof Repair Project Report — Phase Summary</h3>
       </div>
 
       <div class="card space-y-4 mb-4">
