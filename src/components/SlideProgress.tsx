@@ -67,16 +67,6 @@ const SlideProgress = () => {
 
   if (totalSlides === 0) return null;
 
-  // Find which position (1-based index) the current slide is at
-  const currentIndex = (() => {
-    const els = document.querySelectorAll<HTMLElement>('[data-slide]');
-    let idx = 1;
-    els.forEach((el, i) => {
-      if (parseInt(el.dataset.slide || '0', 10) === currentSlide) idx = i + 1;
-    });
-    return idx;
-  })();
-
   return (
     <>
       {/* Progress bar at top of content area */}
@@ -87,10 +77,10 @@ const SlideProgress = () => {
         />
       </div>
 
-      {/* Page counter — fixed bottom-right */}
+      {/* Slide counter — fixed bottom-right */}
       <div className="fixed bottom-6 right-6 z-20 bg-war-surface border border-war-border rounded-sm px-3 py-1.5 shadow-lg">
         <span className="font-mono text-xxs text-war-text-muted">
-          Page <span className="text-war-text">{currentIndex}</span> of {totalSlides}
+          Slide <span className="text-war-text">{currentSlide}</span> / {totalSlides}
         </span>
       </div>
     </>
