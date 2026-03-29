@@ -7,6 +7,7 @@ import {
   ShareNetwork,
   Warning,
   Drop,
+  Certificate,
 } from '@phosphor-icons/react';
 
 interface NavItem {
@@ -30,6 +31,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; weight?: 'reg
   'share-2': ShareNetwork,
   'warning': Warning,
   'drop': Drop,
+  'certificate': Certificate,
 };
 
 const HeaderNav = ({ items, activeNav }: HeaderNavProps) => {

@@ -1,0 +1,1014 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EvidenceExhibit from '../components/EvidenceExhibit.astro';
+import SlideProgress from '../components/SlideProgress';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Documentation — Certificate of Occupancy" activeNav="documentation-coo">
+  <SlideProgress client:load totalSlides={38} />
+
+  <div class="p-6 max-w-5xl mx-auto">
+
+    <!-- Confidential Banner -->
+    <div class="font-mono text-xxs text-war-red/60 uppercase tracking-[0.3em] text-center py-2 mb-6 border-b border-war-red/10">
+      Privileged &amp; Confidential &mdash; Attorney Work Product
+    </div>
+
+    <!-- Section Jump Nav -->
+    <nav class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
+      <a href="#s1" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Title</a>
+      <a href="#s2" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Overview</a>
+      <a href="#s3" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Floor Plans</a>
+      <a href="#s6" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Timeline</a>
+      <a href="#s8" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Evidence</a>
+      <a href="#s9" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">C of O</a>
+      <a href="#s10" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Sq Ft Fraud</a>
+      <a href="#s12" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Compass</a>
+      <a href="#s16" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Grayloftus</a>
+      <a href="#s18" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">StreetEasy</a>
+      <a href="#s24" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">BHS</a>
+      <a href="#s27" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Analysis</a>
+      <a href="#s31" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Tampering</a>
+    </nav>
+
+    <!-- ===================== SLIDE 1: Title / Hero ===================== -->
+    <section id="s1" data-slide="1" class="py-10 border-b border-war-border/30">
+      <div class="text-center mb-8">
+        <h1 class="font-display text-3xl text-war-text tracking-tight">13 Harrison Street, Tribeca</h1>
+        <p class="font-mono text-sm text-war-text-muted mt-2">New York, NY 10013</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-01-elevation-street.webp"
+          alt="Harrison Street elevation — architectural drawing of building in streetscape context"
+          label="Exhibit — Street Elevation"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-01-elevation-front.webp"
+          alt="Front elevation — detailed architectural drawing of 13 Harrison Street facade"
+          label="Exhibit — Front Elevation"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 2: Overview / Table of Contents ===================== -->
+    <section id="s2" data-slide="2" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">02</span>
+        <h2 class="section-title">13 Harrison — Enormous Damage Report</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">I</p>
+          <p class="text-sm text-war-text">Physical Layout &amp; Building Schematic</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">II</p>
+          <p class="text-sm text-war-text">Chronology of the Dispute</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">III</p>
+          <p class="text-sm text-war-text">Screenshots of Initial Bleich Correspondence</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">IV</p>
+          <p class="text-sm text-war-text">Certificate of Occupancy (CoO)</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">V</p>
+          <p class="text-sm text-war-text">Deceptive Sales Advertising</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">VI</p>
+          <p class="text-sm text-war-text">HVAC Violations (The AC Issue)</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">VII</p>
+          <p class="text-sm text-war-text">Physical Non-Compliance — Photo Evidence of Improper AC</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xs text-war-amber mb-1">VIII</p>
+          <p class="text-sm text-war-text">Impact of Bleich's "Intent to Sell"</p>
+        </div>
+        <div class="card p-3 md:col-span-2">
+          <p class="font-mono text-xs text-war-amber mb-1">IX</p>
+          <p class="text-sm text-war-text">Expert Testimony &amp; Engineering &amp; Architectural Findings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 3: Unit 1 Floorplan ===================== -->
+    <section id="s3" data-slide="3" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">03</span>
+        <h2 class="section-title">Unit 1 Floorplan</h2>
+      </div>
+      <div class="bg-war-surface2 border-l-2 border-war-red p-4 rounded-sm mb-6">
+        <p class="text-sm text-war-text font-medium">4 bedrooms with boiler and no sprinkler</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-03-floorplan-unit1-a.webp"
+          alt="Unit 1 floorplan — layout showing 4 bedrooms"
+          label="Unit 1 — Plan A"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-03-floorplan-unit1-b.webp"
+          alt="Unit 1 floorplan — additional layout view"
+          label="Unit 1 — Plan B"
+        />
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-03-floorplan-unit1-c.webp"
+        alt="Unit 1 floorplan — third view"
+        label="Unit 1 — Plan C"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 4: Compass Floor Plan ===================== -->
+    <section id="s4" data-slide="4" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">04</span>
+        <h2 class="section-title">Compass Floor Plan</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-4">As advertised on Real Estate Brokerage site</p>
+      <EvidenceExhibit
+        src="documentation-coo/slide-04-compass-floorplan.webp"
+        alt="Compass listing floor plan for 13 Harrison St Unit 1"
+        label="Compass — Floor Plan"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 5: Compass Floor Plan 2 ===================== -->
+    <section id="s5" data-slide="5" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">05</span>
+        <h2 class="section-title">Compass Floor Plan — Upper Level</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-4">As advertised on Real Estate Brokerage site</p>
+      <EvidenceExhibit
+        src="documentation-coo/slide-05-compass-floorplan-2.webp"
+        alt="Compass listing floor plan — upper level"
+        label="Compass — Upper Floor Plan"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 6: Timeline ===================== -->
+    <section id="s6" data-slide="6" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="font-mono text-xxs text-war-text-muted">06</span>
+        <h2 class="section-title">13 Harrison Timeline</h2>
+      </div>
+      <p class="text-xs text-war-text-dim mb-4">Complete Forensic Chronology &amp; Evidence Map</p>
+
+      <!-- Metrics row -->
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="card p-3 text-center">
+          <div class="metric-value">8</div>
+          <div class="metric-label">Counts</div>
+        </div>
+        <div class="card p-3 text-center">
+          <div class="metric-value">5</div>
+          <div class="metric-label">Felonies</div>
+        </div>
+        <div class="card p-3 text-center">
+          <div class="metric-value">$6–8M</div>
+          <div class="metric-label">Demand</div>
+        </div>
+        <div class="card p-3 text-center">
+          <div class="metric-value">79%</div>
+          <div class="metric-label">Premium</div>
+        </div>
+        <div class="card p-3 text-center">
+          <div class="metric-value">19yr</div>
+          <div class="metric-label">Exposure</div>
+        </div>
+      </div>
+
+      <!-- Timeline Phases -->
+      <div class="space-y-6">
+        <!-- Phase I -->
+        <div class="border-l-2 border-war-amber pl-4">
+          <h3 class="font-mono text-xs text-war-amber font-bold mb-2">I — The Illegal Foundation (1995–2018)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">1995</span> — C of O Issued: Cellar designated for storage/meters only. Never amended.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">1995</span> — Condo Decl: Unit 1 = 25% interest, 2 baths. Roof = Unit 2 exclusive.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">~2007</span> — Illegal Conversion: Bleich builds 3 bedrooms + 2 baths in cellar (no egress).</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">2017</span> — Broker Warning: BHS agent tells Bleich "not legal bedrooms." Bleich "annoyed."</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Mar 2, 2018</span> — "Trigger Email": Bleich writes "bedrooms" knowing illegality.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">2018–19</span> — Listing Fraud: Compass forced to correct 4BR to 1BR. StreetEasy relabels cellar "1st Floor."</p>
+          </div>
+        </div>
+
+        <!-- Phase II -->
+        <div class="border-l-2 border-war-amber pl-4">
+          <h3 class="font-mono text-xs text-war-amber font-bold mb-2">II — Marketing Fraud & Knowledge (2017–2019)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">Pre-2024</span> — Access Denied: DOB inspectors blocked 3 times.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Sept 15, 2022</span> — HVAC Exposed: Technicians confirm NEITHER AC unit works. Perjury exposed.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Oct 2022</span> — Leaks Begin: Water damage starts in Unit 2 kitchen/living room.</p>
+          </div>
+        </div>
+
+        <!-- Phase III -->
+        <div class="border-l-2 border-war-amber pl-4">
+          <h3 class="font-mono text-xs text-war-amber font-bold mb-2">III — Obstruction & Governance (2020–2023)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">Dec 2023</span> — Injunction: Granted based on perjury. Halts roof work.</p>
+          </div>
+        </div>
+
+        <!-- Phase IV -->
+        <div class="border-l-2 border-war-amber pl-4">
+          <h3 class="font-mono text-xs text-war-amber font-bold mb-2">IV — The Perjury–Injunction Nexus (Jun '24–Jan '25)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">Jun 2024</span> — Admission: Counsel admits cellar used for sleeping in court.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Jun 21, 2024</span> — DOB Complaint: New illegal conversion filing (#1712420).</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Jan 17, 2025</span> — Temp Roof: Emergency install ($55k).</p>
+          </div>
+        </div>
+
+        <!-- Phase V -->
+        <div class="border-l-2 border-war-red pl-4">
+          <h3 class="font-mono text-xs text-war-red font-bold mb-2">V — The Extortion (May–Sept 2025)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">May 24, 2025</span> — The Demand: Emails demand $6–8M. Own spreadsheet shows $4.4M value.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Aug 27, 2025</span> — Duress: Victim emails: "House leaking… let's take all demands off table."</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Sept 26, 2025</span> — The Ransom: Term Sheet §5(a): Pay or injunction continues.</p>
+          </div>
+        </div>
+
+        <!-- Phase VI -->
+        <div class="border-l-2 border-war-red pl-4">
+          <h3 class="font-mono text-xs text-war-red font-bold mb-2">VI — The Unraveling (Oct–Dec 2025)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">Oct 23, 2025</span> — Gutted: Unit 2 kitchen demolished due to mold/leaks.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Nov 6, 2025</span> — Concealment: Sheetrock barriers erected over cellar doors before DOB visit (Video).</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Dec 12, 2025</span> — Perjury: Swears HVAC removal = "irreparable harm" (ACs broken).</p>
+          </div>
+        </div>
+
+        <!-- Phase VII -->
+        <div class="border-l-2 border-war-red pl-4">
+          <h3 class="font-mono text-xs text-war-red font-bold mb-2">VII — Continuing Obstruction (Jan 2026–Present)</h3>
+          <div class="space-y-2 text-sm text-war-text-dim">
+            <p><span class="font-mono text-xxs text-war-text-muted">Jan 15, 2026</span> — Access Denied: DOB inspector blocked again.</p>
+            <p><span class="font-mono text-xxs text-war-text-muted">Jan 28, 2026</span> — "Clean" Cellar: Follow-up visit shows "compliant" space (concealment playbook).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Valuation Evidence -->
+      <div class="mt-8 card p-4">
+        <h3 class="font-mono text-xs text-war-amber font-bold mb-3 uppercase tracking-wider">Valuation Evidence — "The Weapon"</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center">
+            <div class="metric-value text-lg">$4.4M</div>
+            <div class="metric-label">Actual Value</div>
+          </div>
+          <div class="text-center">
+            <div class="metric-value text-lg">$5.7M</div>
+            <div class="metric-label">Zillow (Unreliable)</div>
+          </div>
+          <div class="text-center">
+            <div class="metric-value text-lg text-war-red">$6–8M</div>
+            <div class="metric-label">Demand</div>
+          </div>
+          <div class="text-center">
+            <div class="metric-value text-lg text-war-red">+79%</div>
+            <div class="metric-label">Premium</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 7: Section Divider — Listings ===================== -->
+    <section id="s7" data-slide="7" class="py-10 border-b border-war-border/30">
+      <div class="text-center py-8">
+        <span class="font-mono text-xxs text-war-text-muted">07</span>
+        <h2 class="font-display text-2xl text-war-text mt-2">13 Harrison Unit 1 Real Estate Listings</h2>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 8: Evidence Summary ===================== -->
+    <section id="s8" data-slide="8" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="font-mono text-xxs text-war-text-muted">08</span>
+        <h2 class="section-title">Summary — 13 Harrison Unit 1 — Bleich Actions</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-6 font-medium">Evidence of Systematic Fraud &amp; Obstruction</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <!-- EX-02 -->
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-contradicted">EX-02</span>
+            <span class="font-mono text-xxs text-war-red">Critical Evidence</span>
+          </div>
+          <h4 class="text-sm font-bold text-war-text mb-2">"Sleeping Area" Labels</h4>
+          <p class="text-xs text-war-text-dim mb-3">4 cellar rooms labeled "SLEEPING AREA" + 2 full baths. Marketed as co-equal living level.</p>
+          <div class="bg-war-surface2 p-2 rounded-sm">
+            <p class="text-xs text-war-text-dim">Mar 2, 2018 email: Bleich uses word "bedrooms" (plural) knowing illegality. Overrode BHS advice.</p>
+            <p class="font-mono text-xxs text-war-text-muted mt-1">SOURCE: StreetEasy Archive</p>
+          </div>
+          <p class="font-mono text-xxs text-war-amber mt-2">MDL §34</p>
+        </div>
+
+        <!-- EX-03 -->
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-contradicted">EX-03</span>
+            <span class="font-mono text-xxs text-war-red">High Severity</span>
+          </div>
+          <h4 class="text-sm font-bold text-war-text mb-2">Sq. Footage Inflation</h4>
+          <p class="text-xs text-war-text-dim mb-3">414.5 sqft (13.9%) inflation by counting cellar as living space.</p>
+          <div class="bg-war-surface2 p-2 rounded-sm">
+            <p class="text-xs text-war-text-dim">Public record (Decl. Sched B) clearly states 2,985 sqft. Listing claimed 3,400.</p>
+            <p class="font-mono text-xxs text-war-text-muted mt-1">SOURCE: StreetEasy #1279480</p>
+          </div>
+          <p class="font-mono text-xxs text-war-amber mt-2">NYC Admin Code §27-2087</p>
+        </div>
+
+        <!-- EX-04 -->
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-alleged">EX-04</span>
+            <span class="font-mono text-xxs text-war-amber">Consciousness of Guilt</span>
+          </div>
+          <h4 class="text-sm font-bold text-war-text mb-2">Fraudulent Floor Numbering</h4>
+          <p class="text-xs text-war-text-dim mb-3">StreetEasy listing relabels "Cellar" as "1st Floor," displaying it as co-equal living space.</p>
+          <div class="bg-war-surface2 p-2 rounded-sm">
+            <p class="text-xs text-war-text-dim">Bleich directed relabeling specifically after learning cellar was illegal.</p>
+            <p class="font-mono text-xxs text-war-text-muted mt-1">SOURCE: Decl. Sched B; Kornmeier Dep.</p>
+          </div>
+          <p class="font-mono text-xxs text-war-amber mt-2">RPL §443-a</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- EX-05 -->
+        <div class="card p-4 border-l-2 border-war-red">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-contradicted">EX-05</span>
+            <span class="font-mono text-xxs text-war-red font-bold">SMOKING GUN (FELONY)</span>
+          </div>
+          <h4 class="text-sm font-bold text-war-text mb-2">Sheetrock Concealment (Tampering)</h4>
+          <p class="text-xs text-war-text-dim mb-3">Workers installed temporary walls over cellar bedroom/bath doors before DOB inspection.</p>
+          <div class="bg-war-surface2 p-2 rounded-sm">
+            <p class="text-xs text-war-text-dim">Affirmative construction work to physically hide evidence. Captured on video.</p>
+            <p class="font-mono text-xxs text-war-text-muted mt-1">SOURCE: iCloud Album B2XJOG15qJ8HWgR</p>
+          </div>
+          <p class="font-mono text-xxs text-war-red mt-2">NYPL §215.40 (Class E Felony)</p>
+        </div>
+
+        <!-- EX-06 -->
+        <div class="card p-4 border-l-2 border-war-amber">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-alleged">EX-06</span>
+            <span class="font-mono text-xxs text-war-amber">Pattern of Obstruction</span>
+          </div>
+          <h4 class="text-sm font-bold text-war-text mb-2">Systematic DOB Denials</h4>
+          <p class="text-xs text-war-text-dim mb-3">Three documented refusals of DOB entry to Unit 1 cellar pre-2024.</p>
+          <div class="bg-war-surface2 p-2 rounded-sm">
+            <p class="text-xs text-war-text-dim">Not isolated. Only reason to deny access is knowledge that inspection would reveal violations.</p>
+            <p class="font-mono text-xxs text-war-text-muted mt-1">SOURCE: DOB Public File; Berry Aff.</p>
+          </div>
+          <p class="font-mono text-xxs text-war-amber mt-2">NYPL §195.05</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 9: Certificate of Occupancy ===================== -->
+    <section id="s9" data-slide="9" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">09</span>
+        <h2 class="section-title">Certificate of Occupancy</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-09-coo-document.webp"
+          alt="Certificate of Occupancy for 13 Harrison Street"
+          label="C of O Document"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-09-schedule-b.webp"
+          alt="Schedule B from the Condominium Declaration"
+          label="Schedule B"
+        />
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="card p-3">
+          <p class="font-mono text-xxs text-war-amber mb-1">Cellar</p>
+          <p class="text-sm text-war-text">Recreation room, Tenant storage, Meters</p>
+        </div>
+        <div class="card p-3">
+          <p class="font-mono text-xxs text-war-amber mb-1">1st Floor</p>
+          <p class="text-sm text-war-text">Loft dwelling</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 10: Comparison Table ===================== -->
+    <section id="s10" data-slide="10" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">10</span>
+        <h2 class="section-title">Real Estate Listing Fraud — Comparison Table</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-2">Listing vs. DOB Certificate of Occupancy</p>
+      <div class="bg-war-surface2 border-l-2 border-war-red p-4 rounded-sm mb-6">
+        <p class="text-sm text-war-text font-medium">Square Footage Fraud: 414.5 sqft / 13.9% Inflation</p>
+        <p class="font-mono text-xxs text-war-text-muted mt-1">https://www.compass.com/homedetails/13-Harrison-St-Unit-1-Manhattan-NY-10013/82551008785356097_lid/</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr>
+              <th class="table-header text-left">Metric</th>
+              <th class="table-header text-left">As Listed</th>
+              <th class="table-header text-left">As Declared (Legal)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-cell font-medium">Total Square Footage</td>
+              <td class="table-cell text-war-red">3,400 sqft ("approximately")</td>
+              <td class="table-cell">2,985.5 sqft</td>
+            </tr>
+            <tr>
+              <td class="table-cell font-medium">Inflation / Fraud</td>
+              <td class="table-cell text-war-red">414.5 sqft / 13.9% over Declaration</td>
+              <td class="table-cell">Declaration Schedule B, Tax Lot 1351</td>
+            </tr>
+            <tr>
+              <td class="table-cell font-medium">Bedroom Count</td>
+              <td class="table-cell text-war-red">4 bedrooms (Compass)</td>
+              <td class="table-cell">1 bedroom (first floor only)</td>
+            </tr>
+            <tr>
+              <td class="table-cell font-medium">Bathroom Count</td>
+              <td class="table-cell text-war-red">3 bathrooms</td>
+              <td class="table-cell">2 bathrooms (Declaration Schedule B)</td>
+            </tr>
+            <tr>
+              <td class="table-cell font-medium">Cellar Designation</td>
+              <td class="table-cell text-war-red">Cellar labeled 1st Floor with 4 bedrooms, no sprinkler</td>
+              <td class="table-cell">"Cellar" — Rec Room, Tenant Storage, Meters; max 2 people, no sprinkler</td>
+            </tr>
+            <tr>
+              <td class="table-cell font-medium">Floor Numbering</td>
+              <td class="table-cell text-war-red">Cellar labeled as 1st Floor</td>
+              <td class="table-cell">CoO: Cellar = Cellar, 1st Floor = 1st Floor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 11: C of O Images ===================== -->
+    <section id="s11" data-slide="11" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">11</span>
+        <h2 class="section-title">Certificate of Occupancy — Supporting Documents</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-11-coo-image-1.webp"
+          alt="C of O supporting document 1"
+          label="C of O — Document 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-11-coo-image-2.webp"
+          alt="C of O supporting document 2"
+          label="C of O — Document 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 12: Compass Listing ===================== -->
+    <section id="s12" data-slide="12" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">12</span>
+        <h2 class="section-title">Compass Listing</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-12-compass-listing.webp"
+        alt="Compass listing for 13 Harrison St Unit 1"
+        label="Compass — Listing Screenshot"
+        caption="Cellar: Bedroom 1, Bedroom 2, Home Office — https://www.compass.com/homedetails/13-Harrison-St-Unit-1-Manhattan-NY-10013/82551008785356097_lid/"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 13: StreetEasy Floorplan ===================== -->
+    <section id="s13" data-slide="13" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">13</span>
+        <h2 class="section-title">StreetEasy Floor Plan</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-13-streeteasy-floorplan.webp"
+        alt="StreetEasy listing floor plan"
+        label="StreetEasy — Floor Plan"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 14: Compass Listing 2 ===================== -->
+    <section id="s14" data-slide="14" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">14</span>
+        <h2 class="section-title">Compass Listing</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-14-compass-listing.webp"
+        alt="Compass listing screenshot"
+        label="Compass — Listing"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 15: Listing ===================== -->
+    <section id="s15" data-slide="15" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">15</span>
+        <h2 class="section-title">Listing Evidence</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-15-listing.webp"
+        alt="Real estate listing screenshot"
+        label="Listing Screenshot"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 16: Grayloftus ===================== -->
+    <section id="s16" data-slide="16" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">16</span>
+        <h2 class="section-title">Grayloftus Listing</h2>
+      </div>
+      <p class="font-mono text-xxs text-war-text-muted mb-4">https://grayloftus.com/properties/13-harrison-street-tribeca-nyc-10013-us</p>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-16-grayloftus-1.webp"
+          alt="Grayloftus listing page 1"
+          label="Grayloftus — Page 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-16-grayloftus-2.webp"
+          alt="Grayloftus listing page 2"
+          label="Grayloftus — Page 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 17: Grayloftus Description ===================== -->
+    <section id="s17" data-slide="17" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">17</span>
+        <h2 class="section-title">Grayloftus Listing — Full Description</h2>
+      </div>
+      <div class="card p-6">
+        <p class="text-sm text-war-text leading-relaxed italic">
+          "Currently configured as a luxurious 4 bed/4 bath family home, this historic 3,400 square foot maisonette awaits a new owner. Zoned for both residential and commercial use and built in 1887 by architects D. and J. Jardine for liquor merchant Alexander Halliday, this unique property (in a 2-unit condominium) enjoys VERY LOW total monthly charges of ~$1,300. A top architect has already assessed renovation opportunities, and she is available for immediate consultation."
+        </p>
+        <p class="text-sm text-war-text leading-relaxed mt-4 italic">
+          "The expansive main level features 12' ceilings, a 63' X 16' great room with a wall of wood-framed shop windows, renovated chef's kitchen, dining room, home office and a master suite opening onto a balconied solarium."
+        </p>
+        <p class="text-sm text-war-text leading-relaxed mt-4 italic">
+          "Two of the three downstairs sleeping areas have ensuite bathrooms and direct access to a 23' patio open to the solarium and skylights above. Also on the lower level one finds a large den, proper laundry room and a shelf-lined storage hallway. Air conditioning throughout the home is provided by a multi-zone HVAC / air purification system."
+        </p>
+        <p class="text-sm text-war-text leading-relaxed mt-4 italic">
+          "Located on a quiet cobblestoned street in the Tribeca West Historic District, this multifaceted property presents an opportunity to the homeowner, entrepreneur, or both. Surrounding this apartment one finds endless options for dining, nightlife, shopping and outdoor recreation. Enjoy close proximity to the 1/2/3/A/C/E trains."
+        </p>
+        <div class="bg-war-surface2 border-l-2 border-war-red p-3 rounded-sm mt-4">
+          <p class="text-xs text-war-red font-medium">Key Claims: "4 bed/4 bath" — "3,400 square foot" — "sleeping areas have ensuite bathrooms" — "Air conditioning throughout"</p>
+          <p class="text-xs text-war-text-dim mt-1">Each of these claims is contradicted by the Certificate of Occupancy and/or physical evidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 18: StreetEasy Floor Plan Fraud ===================== -->
+    <section id="s18" data-slide="18" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">18</span>
+        <h2 class="section-title">StreetEasy Listing — Floor Plan Fraud</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-2"><strong>StreetEasy Listing #1279480</strong></p>
+      <div class="bg-war-surface2 border-l-2 border-war-amber p-4 rounded-sm mb-4">
+        <p class="text-xs text-war-text-dim"><strong>EVIDENCE:</strong> The StreetEasy listing (Listing ID #1279480, URL: streeteasy.com/sale/1279480) displays a two-level floor plan for "13 Harrison Street, Apartment 1." The left panel is labeled "CELLAR" and the right panel is labeled "1st FLOOR."</p>
+        <p class="text-xs text-war-text-dim mt-2"><strong>THE FRAUD:</strong> The so-called "Cellar" level shows four distinct areas labeled "SLEEPING AREA" with dimensions (10'-5" × 15'-3"; 12'-0" × 15'-3"; 23'-0" × 15'-0"; and 7'-0" × 14'-0"), plus a "DEN" (23'-0" × 18'-0"). It also shows closets (CL) servicing these rooms — a functional indicator of bedroom use. Two full bathrooms are visible in the cellar layout.</p>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-18-streeteasy-floorplan.webp"
+        alt="StreetEasy listing floor plan showing cellar labeled with sleeping areas"
+        label="StreetEasy #1279480 — Floor Plan"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 19: StreetEasy Sleeping Area ===================== -->
+    <section id="s19" data-slide="19" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">19</span>
+        <h2 class="section-title">StreetEasy — Euphemism Detection</h2>
+      </div>
+      <div class="bg-war-surface2 border-l-2 border-war-amber p-4 rounded-sm mb-4">
+        <p class="text-sm text-war-text font-medium mb-2">"Sleeping Area" as Code Circumvention</p>
+        <p class="text-xs text-war-text-dim"><strong>NYC Building Code Definition:</strong> A "bedroom" or "sleeping room" is any room used or intended for sleeping (NYC Admin. Code §28-101.4.3; NYC Housing Maintenance Code). The term "Sleeping Area" is a semantic dodge — there is no legal distinction between a "sleeping area" and a "bedroom" under NYC code. Both require legally complying windows, minimum ceiling heights, and a Certificate of Occupancy designation as habitable space.</p>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-19-streeteasy-sleeping-area.webp"
+        alt="StreetEasy listing detail showing sleeping area designation"
+        label="StreetEasy — 'Sleeping Area' Label"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 20: StreetEasy Listing ===================== -->
+    <section id="s20" data-slide="20" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">20</span>
+        <h2 class="section-title">StreetEasy Listing</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-20-streeteasy-listing.webp"
+        alt="StreetEasy listing screenshot"
+        label="StreetEasy — Listing"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 21: StreetEasy ===================== -->
+    <section id="s21" data-slide="21" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">21</span>
+        <h2 class="section-title">StreetEasy Listing</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-21-streeteasy-1.webp"
+          alt="StreetEasy listing screenshot 1"
+          label="StreetEasy — Image 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-21-streeteasy-2.webp"
+          alt="StreetEasy listing screenshot 2"
+          label="StreetEasy — Image 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 22: StreetEasy ===================== -->
+    <section id="s22" data-slide="22" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">22</span>
+        <h2 class="section-title">StreetEasy Listing</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-22-streeteasy-1.webp"
+          alt="StreetEasy listing screenshot 1"
+          label="StreetEasy — Image 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-22-streeteasy-2.webp"
+          alt="StreetEasy listing screenshot 2"
+          label="StreetEasy — Image 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 23: StreetEasy ===================== -->
+    <section id="s23" data-slide="23" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">23</span>
+        <h2 class="section-title">StreetEasy Listing</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-23-streeteasy.webp"
+        alt="StreetEasy listing screenshot"
+        label="StreetEasy — Listing"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 24: BHS Listing ===================== -->
+    <section id="s24" data-slide="24" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">24</span>
+        <h2 class="section-title">Brown Harris Stevens Listing</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <EvidenceExhibit
+          src="documentation-coo/slide-24-bhs-listing.webp"
+          alt="Brown Harris Stevens listing for 13 Harrison St Unit 1"
+          label="BHS — Listing"
+        />
+        <div class="space-y-3">
+          <h3 class="font-mono text-xs text-war-amber uppercase tracking-wider">Residence Information</h3>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="text-war-text-muted">Type</div><div class="text-war-text">Duplex</div>
+            <div class="text-war-text-muted">Rooms</div><div class="text-war-text">8.0</div>
+            <div class="text-war-text-muted">Bedrooms</div><div class="text-war-text text-war-red font-medium">4</div>
+            <div class="text-war-text-muted">Bathrooms</div><div class="text-war-text text-war-red font-medium">4.0</div>
+            <div class="text-war-text-muted">Kitchen</div><div class="text-war-text">Eat In</div>
+            <div class="text-war-text-muted">A/C</div><div class="text-war-text">Central Air</div>
+            <div class="text-war-text-muted">W/D</div><div class="text-war-text">Yes</div>
+          </div>
+          <h3 class="font-mono text-xs text-war-amber uppercase tracking-wider mt-4">Key Details</h3>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="text-war-text-muted">Location</div><div class="text-war-text">Tribeca, NYC</div>
+            <div class="text-war-text-muted">Type</div><div class="text-war-text">Condominium</div>
+            <div class="text-war-text-muted">Price</div><div class="text-war-text font-medium">$5,500,000</div>
+            <div class="text-war-text-muted">Monthly Tax</div><div class="text-war-text">$762</div>
+            <div class="text-war-text-muted">Sqft</div><div class="text-war-text text-war-red font-medium">3,400 sf</div>
+            <div class="text-war-text-muted">ID</div><div class="text-war-text font-mono text-xs">16791344</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 25: BHS Listing 2 ===================== -->
+    <section id="s25" data-slide="25" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">25</span>
+        <h2 class="section-title">Brown Harris Stevens — Listing Evolution</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-25-bhs-listing.webp"
+        alt="BHS listing screenshot showing evolution of property description"
+        label="BHS — Listing Detail"
+      />
+      <div class="mt-4 space-y-3">
+        <div class="bg-war-surface2 border-l-2 border-war-red p-4 rounded-sm">
+          <p class="text-xs text-war-text font-medium mb-2">EVOLUTION OF THE EUPHEMISM</p>
+          <p class="text-xs text-war-text-dim">Kornmeier testified that the listing went through iterative relabeling:</p>
+          <ol class="list-decimal list-inside text-xs text-war-text-dim mt-2 space-y-1">
+            <li>Initially: <strong>"One Bedroom"</strong> (compliant with C of O).</li>
+            <li>Changed to: <strong>"Maisonette"</strong> (euphemism for ground-floor unit with cellar).</li>
+            <li>Finally: <strong>"Sleeping Areas"</strong> (attempting to market cellar rooms as habitable without using the regulated term "bedroom").</li>
+          </ol>
+          <p class="font-mono text-xxs text-war-text-muted mt-2">[Kornmeier Dep. Tr. 101:2–103:6; Dep. Ex. 20]</p>
+        </div>
+        <div class="bg-war-surface2 border-l-2 border-war-amber p-4 rounded-sm">
+          <p class="text-xs text-war-text font-medium mb-2">TRIGGER EVENT</p>
+          <p class="text-xs text-war-text-dim">On March 2, 2018, Bleich emailed Kornmeier: "One thing that's been on my mind is how we can make our listing appealing to families. You have us listed as one bed, which probably turns a lot of them off. At minimum, we could include pictures of all bedrooms in the listing, right?" Bleich used the word "bedrooms" (plural) while simultaneously knowing these rooms were illegal. This is direct evidence of intentional fraud — not broker error.</p>
+          <p class="font-mono text-xxs text-war-text-muted mt-2">[Dep. Ex. 20; Kornmeier Dep. Tr. 103:9–17]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 26: BHS Gallery ===================== -->
+    <section id="s26" data-slide="26" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">26</span>
+        <h2 class="section-title">Brown Harris Stevens — Listing Gallery</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-26-bhs-1.webp"
+          alt="BHS listing photo 1"
+          label="BHS — Photo 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-26-bhs-2.webp"
+          alt="BHS listing photo 2"
+          label="BHS — Photo 2"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-26-bhs-3.webp"
+          alt="BHS listing photo 3"
+          label="BHS — Photo 3"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-26-bhs-4.webp"
+          alt="BHS listing photo 4"
+          label="BHS — Photo 4"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 27: Property Timeline ===================== -->
+    <section id="s27" data-slide="27" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">27</span>
+        <h2 class="section-title">Property Listing Timeline</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-27-property-timeline.webp"
+        alt="Timeline of property listings and events"
+        label="Property Timeline"
+        fullWidth={true}
+      />
+    </section>
+
+    <!-- ===================== SLIDE 28: Unit Discussion ===================== -->
+    <section id="s28" data-slide="28" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">28</span>
+        <h2 class="section-title">Property Unit 1 and Unit 2 Discussion</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-28-unit-1.webp"
+          alt="Unit comparison photo 1"
+          label="Unit Photo 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-28-unit-2.webp"
+          alt="Unit comparison photo 2"
+          label="Unit Photo 2"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-28-unit-3.webp"
+          alt="Unit comparison photo 3"
+          label="Unit Photo 3"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 29: Cluster Analysis ===================== -->
+    <section id="s29" data-slide="29" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">29</span>
+        <h2 class="section-title">Property Metrics and Cluster Analysis</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-29-cluster-1.webp"
+          alt="Cluster analysis chart 1"
+          label="Cluster Analysis — 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-29-cluster-2.webp"
+          alt="Cluster analysis chart 2"
+          label="Cluster Analysis — 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 30: Correlational Analysis ===================== -->
+    <section id="s30" data-slide="30" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">30</span>
+        <h2 class="section-title">Property Correlational Event Analysis</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-30-correlational-analysis.webp"
+        alt="Correlational event analysis chart"
+        label="Correlational Analysis"
+        fullWidth={true}
+      />
+    </section>
+
+    <!-- ===================== SLIDE 31: Illegal Cellar Use Title ===================== -->
+    <section id="s31" data-slide="31" class="py-10 border-b border-war-border/30">
+      <div class="text-center py-8">
+        <span class="font-mono text-xxs text-war-text-muted">31</span>
+        <h2 class="font-display text-2xl text-war-text mt-2">Unit 1 — Illegal Cellar Use</h2>
+        <p class="font-mono text-sm text-war-text-muted mt-2">13 Harrison Street, Tribeca, New York NY 10013</p>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 32: Tampering Before/After ===================== -->
+    <section id="s32" data-slide="32" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">32</span>
+        <h2 class="section-title">Unit 1 — Tampering: Cellar Bathroom Before &amp; After Sheetrock</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-32-tampering-1.webp"
+          alt="Cellar bathroom before sheetrock installation"
+          label="Before Sheetrock — 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-32-tampering-2.webp"
+          alt="Cellar bathroom during sheetrock installation"
+          label="Before Sheetrock — 2"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-32-tampering-3.webp"
+          alt="Cellar bathroom after sheetrock installation"
+          label="After Sheetrock"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 33: Tampering — Cellar Plan ===================== -->
+    <section id="s33" data-slide="33" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">33</span>
+        <h2 class="section-title">Tampering — Cellar Bathroom Detail</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <EvidenceExhibit
+            src="documentation-coo/slide-33-cellar-plan.webp"
+            alt="Cellar partial floor plan"
+            label="Cellar Plan (Partial)"
+          />
+        </div>
+        <div>
+          <EvidenceExhibit
+            src="documentation-coo/slide-33-cellar-before.webp"
+            alt="Cellar bathroom before sheetrock — as advertised on Compass"
+            label="Before — As Advertised (Compass)"
+          />
+        </div>
+        <div>
+          <EvidenceExhibit
+            src="documentation-coo/slide-33-cellar-after.webp"
+            alt="Cellar bathroom after sheetrock installation — covering bathtub"
+            label="After — Sheetrock Covering Bathtub"
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <p class="text-xs text-war-text-dim text-center">Cellar plan (partial)</p>
+        <p class="text-xs text-war-text-dim text-center">Cellar bathroom as advertised — Compass (Broker) Website</p>
+        <p class="text-xs text-war-text-dim text-center">Cellar bathroom after sheetrock installation</p>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 34: Tampering — Bathroom ===================== -->
+    <section id="s34" data-slide="34" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">34</span>
+        <h2 class="section-title">Tampering — Additional Bathroom Evidence</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-34-bathroom-1.webp"
+          alt="Bathroom tampering evidence 1"
+          label="Bathroom — Photo 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-34-bathroom-2.webp"
+          alt="Bathroom tampering evidence 2"
+          label="Bathroom — Photo 2"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-34-bathroom-3.webp"
+          alt="Bathroom tampering evidence 3"
+          label="Bathroom — Photo 3"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 35: Additional Photos ===================== -->
+    <section id="s35" data-slide="35" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">35</span>
+        <h2 class="section-title">Additional Evidence — Photo Documentation</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-35-photo-1.webp"
+        alt="Additional evidence photo"
+        label="Evidence Photo"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 36: Additional Photos ===================== -->
+    <section id="s36" data-slide="36" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">36</span>
+        <h2 class="section-title">Additional Evidence — Photo Documentation</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="documentation-coo/slide-36-photo-1.webp"
+          alt="Additional evidence photo 1"
+          label="Evidence — Photo 1"
+        />
+        <EvidenceExhibit
+          src="documentation-coo/slide-36-photo-2.webp"
+          alt="Additional evidence photo 2"
+          label="Evidence — Photo 2"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 37: Photo ===================== -->
+    <section id="s37" data-slide="37" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">37</span>
+        <h2 class="section-title">Evidence — Photo Documentation</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-37-photo.webp"
+        alt="Evidence photo"
+        label="Evidence Photo"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 38: Photo ===================== -->
+    <section id="s38" data-slide="38" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">38</span>
+        <h2 class="section-title">Evidence — Photo Documentation</h2>
+      </div>
+      <EvidenceExhibit
+        src="documentation-coo/slide-38-photo.webp"
+        alt="Evidence photo"
+        label="Evidence Photo"
+      />
+    </section>
+
+  </div>
+</BaseLayout>
