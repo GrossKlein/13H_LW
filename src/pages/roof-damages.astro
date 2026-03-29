@@ -1,0 +1,917 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EvidenceExhibit from '../components/EvidenceExhibit.astro';
+import SlideProgress from '../components/SlideProgress';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imgBase = 'roof-damages';
+---
+
+<BaseLayout title="Roof Leak Damages" activeNav="roof-damages">
+  <SlideProgress client:load totalSlides={29} />
+
+  <div class="p-6 max-w-5xl mx-auto">
+
+    <!-- Confidential Banner -->
+    <div class="font-mono text-xxs text-war-red/60 uppercase tracking-[0.3em] text-center py-2 mb-6 border-b border-war-red/10">
+      Privileged &amp; Confidential &mdash; Attorney Work Product
+    </div>
+
+    <!-- Section Jump Nav -->
+    <nav class="sticky top-1 z-10 bg-war-bg/90 backdrop-blur border border-war-border rounded-sm py-2 px-4 mb-8 flex gap-4 overflow-x-auto">
+      <a href="#s1" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Title</a>
+      <a href="#s2" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Roof Plans</a>
+      <a href="#s3" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Cracks</a>
+      <a href="#s6" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Expert Reports</a>
+      <a href="#s9" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Emergency Sealing</a>
+      <a href="#s11" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Atrium</a>
+      <a href="#s14" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Interior</a>
+      <a href="#s16" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Living Room</a>
+      <a href="#s18" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Kitchen</a>
+      <a href="#s22" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">5th Floor</a>
+      <a href="#s23" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Cost Summary</a>
+      <a href="#s25" class="font-mono text-xxs text-war-text-muted hover:text-war-amber transition-colors whitespace-nowrap">Project Reports</a>
+    </nav>
+
+    <!-- ===================== SLIDE 1: Title ===================== -->
+    <section id="s1" data-slide="1" class="py-10 border-b border-war-border/30">
+      <div class="text-center mb-8">
+        <p class="font-mono text-sm text-war-text-muted mb-2">Roof Leaks and Interior Damages</p>
+        <h1 class="font-display text-3xl text-war-text tracking-tight">13 Harrison Street Unit 2</h1>
+        <p class="font-mono text-sm text-war-text-muted mt-2">Tribeca, New York, NY 10013</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit
+          src="roof-damages/slide-01-street-elevation.webp"
+          alt="Existing Harrison Street Elevation — architectural drawing"
+          label="Street Elevation"
+        />
+        <EvidenceExhibit
+          src="roof-damages/slide-01-roof-photo.webp"
+          alt="13 Harrison Street rooftop view looking towards One World Trade Center"
+          label="Roof View — 13 Harrison"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 2: Roof Plans Overview ===================== -->
+    <section id="s2" data-slide="2" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">02</span>
+        <h2 class="section-title">Roof Plans — Overview</h2>
+        <span class="font-mono text-xxs text-war-text-muted ml-auto">5th Floor Roof</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <EvidenceExhibit
+          src="roof-damages/floor-plan-5th.webp"
+          alt="Existing Penthouse Plan — 5th floor showing open to below, exterior roof terrace, 524.6 sq ft"
+          label="5th Floor Plan"
+          caption="Harrison Street side — Courtyard side. Shows 5th floor interior, exterior roof terrace."
+        />
+        <EvidenceExhibit
+          src="roof-damages/slide-02-roof-overview.webp"
+          alt="Roof overview plan showing Harrison Street and Courtyard sides"
+          label="5th Floor Roof Overview"
+        />
+        <EvidenceExhibit
+          src="roof-damages/slide-02-upper-roof.webp"
+          alt="Upper roof (bulkhead) plan showing HVAC locations"
+          label="HVAC Locations — Upper Roof"
+        />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 3: Unfinished Roof & Cracks ===================== -->
+    <section id="s3" data-slide="3" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">03</span>
+        <h2 class="section-title">Unfinished Roof &amp; Cracks</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Roof membrane cracks throughout the entire roof</li>
+          <li>Massive water damage on 4th and 5th fl, destroying all systems, surfaces, millwork and appliances</li>
+          <li>Lack of full roofing system</li>
+          <li>Lack of insulation: 4th fl is inhabitable</li>
+          <li>Damaged skylights, atrium, doors</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-03-crack-1.webp" alt="Roof membrane crack — photo 1" label="Crack Evidence 1" />
+        <EvidenceExhibit src="roof-damages/slide-03-crack-2.webp" alt="Roof membrane crack — photo 2" label="Crack Evidence 2" />
+        <EvidenceExhibit src="roof-damages/slide-03-crack-3.webp" alt="Roof membrane crack — photo 3" label="Crack Evidence 3" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 4: Unfinished Roof & Cracks cont. ===================== -->
+    <section id="s4" data-slide="4" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">04</span>
+        <h2 class="section-title">Unfinished Roof &amp; Cracks — Detail</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-04-membrane-damage.webp" alt="Damaged roof membrane showing deterioration and holes" label="Membrane Damage" />
+        <EvidenceExhibit src="roof-damages/slide-04-crack-closeup.webp" alt="Roof membrane crack close-up" label="Crack Close-up" />
+        <EvidenceExhibit src="roof-damages/slide-04-photo-1.webp" alt="Roof damage photo" label="Damage Photo A" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-04-photo-2.webp" alt="Roof damage photo" label="Damage Photo B" />
+        <EvidenceExhibit src="roof-damages/slide-04-photo-3.webp" alt="Roof damage photo" label="Damage Photo C" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 5: Rotten Wood Screen ===================== -->
+    <section id="s5" data-slide="5" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">05</span>
+        <h2 class="section-title">Unfinished Roof &amp; Rotten Wood Screen</h2>
+      </div>
+      <div class="bg-war-amber/5 border border-war-amber/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Emergency Safety Measure</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Removed rotten, detached wood screen</li>
+          <li>Installed orange safety net</li>
+          <li>Prevent further damages e.g. to neighboring buildings and 13 Harrison</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-05-rotten-wood-1.webp" alt="Rotten wood screen on roof" label="Rotten Wood 1" />
+        <EvidenceExhibit src="roof-damages/slide-05-rotten-wood-2.webp" alt="Rotten wood screen detail" label="Rotten Wood 2" />
+        <EvidenceExhibit src="roof-damages/slide-05-safety-net.webp" alt="Safety net installed after wood screen removal" label="Safety Net Installed" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 6: Court Expert Report ===================== -->
+    <section id="s6" data-slide="6" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">06</span>
+        <h2 class="section-title">Evidence Report — Court Expert (Bleich)</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit src="roof-damages/slide-06-expert-report-1.webp" alt="Court expert report representing Michael Bleich — page 1" label="Expert Report — Page 1" />
+        <EvidenceExhibit src="roof-damages/slide-06-expert-report-2.webp" alt="Court expert report representing Michael Bleich — page 2" label="Expert Report — Page 2" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 7: MEP Expert Report ===================== -->
+    <section id="s7" data-slide="7" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">07</span>
+        <h2 class="section-title">MEP Expert Report (HZLAE) — Defective Roof Leaking</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit src="roof-damages/slide-07-mep-report-1.webp" alt="MEP expert report by HZLAE — page 1" label="MEP Report — Page 1" />
+        <EvidenceExhibit src="roof-damages/slide-07-mep-report-2.webp" alt="MEP expert report by HZLAE — page 2" label="MEP Report — Page 2" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 8: MEP Expert Report cont. ===================== -->
+    <section id="s8" data-slide="8" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">08</span>
+        <h2 class="section-title">MEP Expert Report (HZLAE) — Continued</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <EvidenceExhibit src="roof-damages/slide-08-mep-report-3.webp" alt="MEP expert report — page 3" label="MEP Report — Page 3" />
+        <EvidenceExhibit src="roof-damages/slide-08-mep-report-4.webp" alt="MEP expert report — page 4" label="MEP Report — Page 4" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 9: Emergency Sealing ===================== -->
+    <section id="s9" data-slide="9" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">09</span>
+        <h2 class="section-title">Unfinished Roof &amp; Cracks — Emergency Temporary Sealing</h2>
+      </div>
+      <div class="bg-war-amber/5 border border-war-amber/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Emergency Temporary Sealing</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Expandable Polyurethane foam applied as emergency seal to membrane and stucco walls</li>
+          <li>Silicone sealant applied on all skylights and wintergarden (all glass structures)</li>
+          <li>Silicone sealant applied to the cracks on the membrane</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-09-sealing-overview.webp" alt="Roof overview showing emergency sealing areas" label="Sealing Overview" />
+        <EvidenceExhibit src="roof-damages/slide-09-foam-1.webp" alt="Polyurethane foam seal — photo 1" label="Foam Seal 1" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-09-foam-2.webp" alt="Polyurethane foam seal — photo 2" label="Foam Seal 2" />
+        <EvidenceExhibit src="roof-damages/slide-09-foam-3.webp" alt="Polyurethane foam seal — photo 3" label="Foam Seal 3" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 10: Extreme Exposure Decay ===================== -->
+    <section id="s10" data-slide="10" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">10</span>
+        <h2 class="section-title">Unfinished Roof &amp; Extreme Exposure Decay</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Membrane</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Holes on membrane</li>
+          <li>Rotten wood screen</li>
+          <li>Corroded steel</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-10-decay-1.webp" alt="Decaying roof membrane — holes" label="Decay 1" />
+        <EvidenceExhibit src="roof-damages/slide-10-decay-2.webp" alt="Decaying roof — rotten wood" label="Decay 2" />
+        <EvidenceExhibit src="roof-damages/slide-10-decay-3.webp" alt="Corroded steel on roof" label="Decay 3" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-10-decay-4.webp" alt="Roof decay detail" label="Decay 4" />
+        <EvidenceExhibit src="roof-damages/slide-10-decay-5.webp" alt="Roof decay detail" label="Decay 5" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 11: Atrium Decay ===================== -->
+    <section id="s11" data-slide="11" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">11</span>
+        <h2 class="section-title">Atrium Decay — Glass Structure</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Glass Systems</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Air and water infiltration in window glass panes</li>
+          <li>Cracks in sealants</li>
+          <li>Atrium structure exposed to water — corrosion</li>
+          <li>Water leaks throughout the atrium to walls and interior stairwell</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-11-atrium-1.webp" alt="Atrium glass decay — corrosion" label="Atrium 1" />
+        <EvidenceExhibit src="roof-damages/slide-11-atrium-2.webp" alt="Atrium glass decay — sealant cracks" label="Atrium 2" />
+        <EvidenceExhibit src="roof-damages/slide-11-atrium-3.webp" alt="Atrium glass — water infiltration" label="Atrium 3" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 12: Atrium Decay Photos ===================== -->
+    <section id="s12" data-slide="12" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">12</span>
+        <h2 class="section-title">Atrium Decay — Additional Photos</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-4.webp" alt="Atrium decay photo" label="Atrium 4" />
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-5.webp" alt="Atrium decay photo" label="Atrium 5" />
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-6.webp" alt="Atrium decay photo" label="Atrium 6" />
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-7.webp" alt="Atrium decay photo" label="Atrium 7" />
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-8.webp" alt="Atrium decay photo" label="Atrium 8" />
+        <EvidenceExhibit src="roof-damages/slide-12-atrium-9.webp" alt="Atrium decay photo" label="Atrium 9" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 13: Exposed Wiring ===================== -->
+    <section id="s13" data-slide="13" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">13</span>
+        <h2 class="section-title">Exposed Electrical Wiring &amp; Damaged Door</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Decaying Roof Membrane</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Holes on membrane</li>
+          <li>Exposed wires</li>
+          <li>Both doors are destroyed due to water, emergency sealed</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-13-wiring-1.webp" alt="Exposed electrical wiring on bulkhead" label="Exposed Wiring 1" />
+        <EvidenceExhibit src="roof-damages/slide-13-wiring-2.webp" alt="Damaged door due to water" label="Damaged Door" />
+        <EvidenceExhibit src="roof-damages/slide-13-wiring-3.webp" alt="Exposed wiring detail" label="Exposed Wiring 2" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-13-wiring-4.webp" alt="Bulkhead damage" label="Bulkhead Damage" />
+        <EvidenceExhibit src="roof-damages/slide-13-wiring-5.webp" alt="Emergency sealed door" label="Emergency Sealed" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 14: Interior Damages Divider ===================== -->
+    <section id="s14" data-slide="14" class="py-16 border-b border-war-border/30">
+      <div class="text-center">
+        <h2 class="font-display text-2xl text-war-amber tracking-tight">Interior Damages</h2>
+        <p class="font-display text-xl text-war-text-dim mt-2 italic">Unit 2 — Floor 4th &amp; 5th</p>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 15: Floor Plan Unit 2 ===================== -->
+    <section id="s15" data-slide="15" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">15</span>
+        <h2 class="section-title">Floor Plan — Unit 2</h2>
+      </div>
+      <p class="text-sm text-war-text-dim mb-4">4th floor plan — Damaged floor due to water infiltration from 5th fl roof</p>
+      <EvidenceExhibit
+        src="roof-damages/floor-plan-4th.webp"
+        alt="Existing Fourth Floor Plan showing Kitchen/Dining, Living Room, Pantry areas — all damaged by water infiltration"
+        label="4th Floor Plan — Damage Overview"
+        caption="Key areas: Pantry, Kitchen/Dining, Living Room — all affected by water from 5th floor roof"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 16: Living Room Water Damage ===================== -->
+    <section id="s16" data-slide="16" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">16</span>
+        <h2 class="section-title">4th Floor — Living Room Water Damage</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Water destroyed ceiling sheetrock, framing, paint</li>
+          <li>Water traveled throughout the entire ceiling destroying structural beams, joists, insulation</li>
+          <li>Water damaged oak floor — puddles, warping of planks</li>
+          <li>Water destroyed electrical system, AV system and all light fixtures</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-16-living-1.webp" alt="Living room ceiling water damage" label="Living Room 1" />
+        <EvidenceExhibit src="roof-damages/slide-16-living-2.webp" alt="Living room water damage" label="Living Room 2" />
+        <EvidenceExhibit src="roof-damages/slide-16-living-3.webp" alt="Living room water damage" label="Living Room 3" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-16-living-4.webp" alt="Living room water damage — ceiling collapse" label="Living Room 4" />
+        <EvidenceExhibit src="roof-damages/slide-16-living-5.webp" alt="Living room water damage — floor warping" label="Living Room 5" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 17: Living Room cont. ===================== -->
+    <section id="s17" data-slide="17" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">17</span>
+        <h2 class="section-title">4th Floor — Living Room — Additional Photos</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-17-living-6.webp" alt="Living room damage detail" label="Living Room 6" />
+        <EvidenceExhibit src="roof-damages/slide-17-living-7.webp" alt="Living room damage detail" label="Living Room 7" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-17-living-8.webp" alt="Living room damage detail" label="Living Room 8" />
+        <EvidenceExhibit src="roof-damages/slide-17-living-9.webp" alt="Living room damage detail" label="Living Room 9" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 18: Pantry Damage ===================== -->
+    <section id="s18" data-slide="18" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">18</span>
+        <h2 class="section-title">4th Floor — Pantry Water Damage</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Water destroyed ceiling structure, insulation</li>
+          <li>Water destroyed sheetrock, framing, paint</li>
+          <li>Water created mold throughout entire kitchen pantry millwork</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-18-pantry-1.webp" alt="Pantry ceiling water damage" label="Pantry 1" />
+        <EvidenceExhibit src="roof-damages/slide-18-pantry-2.webp" alt="Pantry mold damage" label="Pantry 2" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-18-pantry-3.webp" alt="Pantry millwork damage" label="Pantry 3" />
+        <EvidenceExhibit src="roof-damages/slide-18-pantry-4.webp" alt="Pantry ceiling damage" label="Pantry 4" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 19: Kitchen/Dining ===================== -->
+    <section id="s19" data-slide="19" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">19</span>
+        <h2 class="section-title">4th Floor — Kitchen/Dining Water Damage</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Water destroyed ceiling structure, insulation</li>
+          <li>Water destroyed sheetrock, framing, paint, wallpaper</li>
+          <li>Water created mold throughout entire kitchen millwork</li>
+          <li>Water destroyed all kitchen appliances</li>
+          <li>Water damaged oak floor — puddles, warping of planks, discoloration</li>
+          <li>Water destroyed all light fixtures</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-19-kitchen-1.webp" alt="Kitchen water damage" label="Kitchen 1" />
+        <EvidenceExhibit src="roof-damages/slide-19-kitchen-2.webp" alt="Kitchen water damage" label="Kitchen 2" />
+        <EvidenceExhibit src="roof-damages/slide-19-kitchen-3.webp" alt="Kitchen water damage" label="Kitchen 3" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-19-kitchen-4.webp" alt="Kitchen water damage" label="Kitchen 4" />
+        <EvidenceExhibit src="roof-damages/slide-19-kitchen-5.webp" alt="Kitchen water damage" label="Kitchen 5" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 20: Kitchen/Dining cont. ===================== -->
+    <section id="s20" data-slide="20" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">20</span>
+        <h2 class="section-title">4th Floor — Kitchen/Dining — Additional Photos</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-20-kitchen-6.webp" alt="Kitchen damage detail" label="Kitchen 6" />
+        <EvidenceExhibit src="roof-damages/slide-20-kitchen-7.webp" alt="Kitchen damage detail" label="Kitchen 7" />
+        <EvidenceExhibit src="roof-damages/slide-20-kitchen-8.webp" alt="Kitchen damage detail" label="Kitchen 8" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-20-kitchen-9.webp" alt="Kitchen damage detail" label="Kitchen 9" />
+        <EvidenceExhibit src="roof-damages/slide-20-kitchen-10.webp" alt="Kitchen damage detail" label="Kitchen 10" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 21: Kitchen/Dining cont. ===================== -->
+    <section id="s21" data-slide="21" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">21</span>
+        <h2 class="section-title">4th Floor — Kitchen/Dining — Further Evidence</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-21-kitchen-11.webp" alt="Kitchen damage" label="Kitchen 11" />
+        <EvidenceExhibit src="roof-damages/slide-21-kitchen-12.webp" alt="Kitchen damage" label="Kitchen 12" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 22: 5th Floor Below Bulkhead ===================== -->
+    <section id="s22" data-slide="22" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">22</span>
+        <h2 class="section-title">5th Floor Ceiling Water Damages — Below Bulkhead</h2>
+      </div>
+      <div class="bg-war-red/5 border border-war-red/20 rounded-sm p-4 mb-4">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-2">Visible Water Damage</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Water destroyed ceiling structure and insulation</li>
+          <li>Water destroyed ceiling sheetrock, framing, paint</li>
+          <li>Water destroyed entire HVAC system, electrical system</li>
+          <li>Water destroyed both doors</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-1.webp" alt="5th floor ceiling damage below bulkhead" label="5th Floor 1" />
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-2.webp" alt="5th floor ceiling damage" label="5th Floor 2" />
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-3.webp" alt="5th floor ceiling damage" label="5th Floor 3" />
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-4.webp" alt="5th floor water damage" label="5th Floor 4" />
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-5.webp" alt="5th floor damage detail" label="5th Floor 5" />
+        <EvidenceExhibit src="roof-damages/slide-22-5thfl-6.webp" alt="5th floor damage detail" label="5th Floor 6" />
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 23: Damages Summary ===================== -->
+    <section id="s23" data-slide="23" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="font-mono text-xxs text-war-text-muted">23</span>
+        <h2 class="section-title">4th and 5th Floor Water Damages — Cost Summary</h2>
+      </div>
+
+      <!-- Cost breakdown table -->
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th class="table-header">Category</th>
+              <th class="table-header text-right">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-cell">
+                <span class="font-medium text-war-text">Exterior: Roof</span>
+                <div class="text-xs text-war-text-muted mt-1">Kempur roofing system with 20 yrs warranty · 2 Skylights over Living Room · Atrium Wintergarden Structure · 2 Exterior doors</div>
+              </td>
+              <td class="table-cell text-right font-mono text-war-amber">$500,000</td>
+            </tr>
+            <tr>
+              <td class="table-cell">
+                <span class="font-medium text-war-text">Interior: Ceiling/Walls</span>
+                <div class="text-xs text-war-text-muted mt-1">Structural beams, joists, insulation · Asbestos abatement · Sheetrock and framing · Paint/Wallpaper · Electrical system and light fixtures · AV system · HVAC system incl. grills</div>
+              </td>
+              <td class="table-cell text-right font-mono text-war-amber">$1,000,000</td>
+            </tr>
+            <tr>
+              <td class="table-cell">
+                <span class="font-medium text-war-text">Interior: Flooring</span>
+                <div class="text-xs text-war-text-muted mt-1">Oak wood 4th fl throughout</div>
+              </td>
+              <td class="table-cell text-right font-mono text-war-amber">$250,000</td>
+            </tr>
+            <tr>
+              <td class="table-cell">
+                <span class="font-medium text-war-text">Interior: Kitchen</span>
+                <div class="text-xs text-war-text-muted mt-1">Kitchen and Pantry Millwork · Kitchen Appliances</div>
+              </td>
+              <td class="table-cell text-right font-mono text-war-amber">$450,000</td>
+            </tr>
+            <tr class="border-t-2 border-war-amber/30">
+              <td class="table-cell font-medium text-war-text text-lg">Total Reconstruction Cost</td>
+              <td class="table-cell text-right font-mono text-war-red text-lg font-semibold">$2,200,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-sm text-war-text-dim italic mb-4">This is purely cost for reconstruction of damages cost.</p>
+
+      <div class="card border-l-2 border-war-red">
+        <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-3">Additional Costs (On Top)</div>
+        <ul class="text-sm text-war-text-dim space-y-1">
+          <li>Carrying cost: $1M p.a.</li>
+          <li>Construction delay: $1.2M</li>
+          <li>Construction inflation</li>
+          <li>All related additional consultant cost of expired approvals, expanded scope, rebid of construction</li>
+          <li>Loss of rental income post renovation</li>
+          <li>Loss of rental income pre renovation</li>
+          <li>Additional housing cost of Damerau</li>
+          <li>Additional housing cost of Partner Vogt</li>
+          <li>Increased insurance policy due to decay of building</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 24: Work Approval ===================== -->
+    <section id="s24" data-slide="24" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">24</span>
+        <h2 class="section-title">Unit 2's Work Approval for Roof Work</h2>
+      </div>
+      <EvidenceExhibit
+        src="roof-damages/slide-24-work-approval.webp"
+        alt="Work approval document for roof repair project at 13 Harrison Street"
+        label="Work Approval Document"
+      />
+    </section>
+
+    <!-- ===================== SLIDE 25: Roof Repair Project Report ===================== -->
+    <section id="s25" data-slide="25" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">25</span>
+        <h2 class="section-title">Roof Repair Project Report</h2>
+      </div>
+
+      <div class="card space-y-4 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Project Overview</div>
+        <p class="text-sm text-war-text-dim">The project addresses significant water leakage issues on the upper floors (5th floor, kitchen, pantry, and living room of the 4th floor) due to porous areas on the horizontal roof membrane, bulkhead, and side walls. There are also cracks and water leaks in the basement area near the meters and electrical closet. Due to time and temperature constraints, and the presence of asbestos, a temporary roof (Phase 1) is being installed, which will serve as the first layer for a permanent roof to be installed in the spring.</p>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Key Contractors &amp; Roles</div>
+        <div class="space-y-2 text-sm">
+          <div><span class="text-war-text font-medium">Foundations Group</span> <span class="text-war-text-dim">(Ken Eybs)</span> — Pre-construction services, securing proposals, overall project management</div>
+          <div><span class="text-war-text font-medium">HD Contractors Corp</span> <span class="text-war-text-dim">(Gurjit Singh)</span> — Temporary roof membrane installation, steel beam removal, stucco work, sidewalk caulking, steel railing painting, chimney demolition</div>
+          <div><span class="text-war-text font-medium">GKM Industries Inc</span> <span class="text-war-text-dim">(George Moncayo)</span> — Asbestos abatement (ACM Roof Membrane and Flashing)</div>
+          <div><span class="text-war-text font-medium">ERPM Co.</span> <span class="text-war-text-dim">(Mira Labiscase, Charles Dachs)</span> — Property management, proposals, payment processing</div>
+          <div><span class="text-war-text font-medium">Rhini Solutions LLC</span> — Air monitoring</div>
+        </div>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Deliverables by HD Contractors Corp (Base Scope)</div>
+        <div class="space-y-3 text-sm text-war-text-dim">
+          <div><span class="text-war-text font-medium">Work Area 1: Temporary Roof Membrane</span> — Clean wood decking substrate. Install Siplast Primer with TA-119. Install Siplast SA vapor retarder. Install peel and stick roofing membrane over entire existing roof.</div>
+          <div><span class="text-war-text font-medium">Work Area 2: Removal of Steel Beams</span> — Install protection on roof. Cut steel beams into small pieces and remove.</div>
+          <div><span class="text-war-text font-medium">Work Area 3: Stucco (600 sf)</span> — Sound all cracks and demo loose stucco from both sides. Install mesh wire via gun anchors. Apply single coat of stucco.</div>
+          <div><span class="text-war-text font-medium">Work Area 4: Sidewalk Caulking Repair</span> — Remove existing damaged caulking. Install new caulking around sidewalk joints.</div>
+          <div><span class="text-war-text font-medium">Work Area 5: Scrape, Prime and Paint Steel Railing</span> — Protect area with tarp. Electric scrape. Apply Rustoleum Primer. Apply 2 coats paint.</div>
+          <div><span class="text-war-text font-medium">Work Area 6: Chimney Demo</span> — Demo existing leaning chimney up to roof level. Install proper closing protocol.</div>
+        </div>
+        <div class="text-sm font-mono text-war-text-muted">Job Mobilization: $3,000</div>
+      </div>
+
+      <div class="bg-war-surface2 border-l-2 border-war-amber p-4 rounded-sm">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-2">Consent &amp; Agreement</div>
+        <p class="text-sm text-war-text-dim">The emails demonstrate a clear process of discussion, proposal, and approval for the roof repair project. Arnulf Damerau (13 Harrison) signed the contracts with GKM and HD Contractors Corp. Michael Bleich's involvement is evident through his questions about permits and project expenses, indicating his awareness and participation in the financial aspects. The project is considered a structural repair, making both Unit 1 and Unit 2 responsible for payment.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 26: Timeline of Discussions ===================== -->
+    <section id="s26" data-slide="26" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">26</span>
+        <h2 class="section-title">Timeline of Discussions with ERPM Co. &amp; Approvals</h2>
+      </div>
+
+      <div class="space-y-4 border-l-2 border-war-amber/30 ml-4 pl-6">
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">October 5, 2022</div>
+          <p class="text-sm text-war-text-dim">Mira Labiscase (ERPM Co.) emailed Arnulf Damerau and Irene Vogt to inquire about plans for the roof before recommending waterproofing. Arnulf responded they plan to demolish, replace skylights, extend elevator, and add new roof.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">October 24, 2022</div>
+          <p class="text-sm text-war-text-dim">Irene Vogt followed up on roofing estimates. Mira contacted Titan Services and Fort Cica. Titan proposal forwarded. Irene requested estimates for temporary patch-up, full waterproofing, and opening 4th floor ceilings.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">November 22, 2022</div>
+          <p class="text-sm text-war-text-dim">Mira sent Fort Cica proposal for roof repairs.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-red"></div>
+          <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-1">December 8, 2023</div>
+          <p class="text-sm text-war-text-dim">Irene sent summary of required repairs to ERPM Co. — temporary roof due to approval constraints and asbestos. GKM and HD contracts already signed by Arnulf Damerau. Three signed proposals sent to Ken Eybs and Mira.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">December 13, 2023</div>
+          <p class="text-sm text-war-text-dim">Irene informed ERPM two more retainer/proposals needed payment. W9s exchanged for GKM and HD Contractors.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">January 9, 2024</div>
+          <p class="text-sm text-war-text-dim">Mike Bleich raised questions about permits, basement drilling, and confirmation the work is a building expense. Concerned about regulatory exposure. Ken Eybs responded with ACP7 and ACP13 permits.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">January 29, 2024</div>
+          <p class="text-sm text-war-text-dim">Ken Eybs provided breakdown: HD total contract $55,550 — $20,650 paid as deposit, $29,750 progress payment due.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">February 5–22, 2024</div>
+          <p class="text-sm text-war-text-dim">Charles Dachs sent preliminary assessment of $65,346.63. Bleichs had not yet paid their assessment. ERPM warned of cashflow issues.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-red"></div>
+          <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-1">April 18–22, 2024</div>
+          <p class="text-sm text-war-text-dim">Arnulf denied roof access for inspection by Alex Urban and Michael Bleich (improper procedure). ERPM stated roof is common area. Counsel advised inspection acceptable given Bleich's financial contribution. Irene requested 48-hour advance notice and AC unit removal.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">July 30, 2024</div>
+          <p class="text-sm text-war-text-dim">Arnulf requested ERPM review management agreement. Requested preservation of all documents related to roof repair, communications, bills, and cost apportionment to the Bleiches.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -left-[1.85rem] top-0.5 w-3 h-3 rounded-full bg-war-amber"></div>
+          <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-1">September 9, 2025</div>
+          <p class="text-sm text-war-text-dim">Arnulf forwarded GKM and HD proposals to Nolan Shanahan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 27: 2023 Project Report ===================== -->
+    <section id="s27" data-slide="27" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">27</span>
+        <h2 class="section-title">2023 Roof Repair Project Report</h2>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">HD Contractors Corp — Base Scope Costs</div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="table-header">Work Area</th>
+                <th class="table-header text-right">Cost (+ tax)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="table-cell text-war-text">1. Temporary Roof Membrane</td><td class="table-cell text-right font-mono">$19,500</td></tr>
+              <tr><td class="table-cell text-war-text">2. Removal of Steel Beams</td><td class="table-cell text-right font-mono">$7,500</td></tr>
+              <tr><td class="table-cell text-war-text">3. Stucco (600 sf)</td><td class="table-cell text-right font-mono">$4,800</td></tr>
+              <tr><td class="table-cell text-war-text">4. Sidewalk Caulking Repair</td><td class="table-cell text-right font-mono">$2,000</td></tr>
+              <tr><td class="table-cell text-war-text">5. Scrape, Prime &amp; Paint Steel Railing</td><td class="table-cell text-right font-mono">$2,500</td></tr>
+              <tr><td class="table-cell text-war-text">6. Chimney Demo</td><td class="table-cell text-right font-mono">$2,000</td></tr>
+              <tr><td class="table-cell text-war-text">Job Mobilization</td><td class="table-cell text-right font-mono">$3,000</td></tr>
+              <tr class="border-t border-war-amber/30"><td class="table-cell font-medium text-war-text">Total Job (Base Scope)</td><td class="table-cell text-right font-mono text-war-amber font-semibold">$41,300</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Alternate Work Areas (Optional)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="table-header">Item</th>
+                <th class="table-header text-right">Cost (+ tax)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="table-cell text-war-text">Parapet Demolition (30 lf)</td><td class="table-cell text-right font-mono">$3,500</td></tr>
+              <tr><td class="table-cell text-war-text">Façade Wall scrape, prime &amp; paint (550 sf)</td><td class="table-cell text-right font-mono">$6,500</td></tr>
+              <tr><td class="table-cell text-war-text">Job Mobilization</td><td class="table-cell text-right font-mono">$1,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Change Order — Plywood Installation</div>
+        <p class="text-sm text-war-text-dim">Install ¾" plywood decking on top of the entire metal deck and top of the bulkhead.</p>
+        <div class="flex justify-between text-sm">
+          <span class="text-war-text">Wood Decking Installation</span>
+          <span class="font-mono text-war-amber">$14,250</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-war-text">Job Mobilization</span>
+          <span class="font-mono">$2,000</span>
+        </div>
+        <p class="text-xs text-war-text-muted mt-2">Approved after discovery that metal decking had no plywood, required for new roof membrane.</p>
+      </div>
+
+      <div class="card border-l-2 border-war-amber">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-3">Payments &amp; Balances (HD Only)</div>
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <div class="metric-value text-war-text">$55,550</div>
+            <div class="metric-label">Total Contract</div>
+          </div>
+          <div>
+            <div class="metric-value text-war-green">$50,400</div>
+            <div class="metric-label">Paid</div>
+          </div>
+          <div>
+            <div class="metric-value text-war-red">$5,150</div>
+            <div class="metric-label">Balance Due</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 28: 2022 Report ===================== -->
+    <section id="s28" data-slide="28" class="py-10 border-b border-war-border/30">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">28</span>
+        <h2 class="section-title">2022 Roof Repair Project Report</h2>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Initial Proposals (October 2022)</div>
+        <div class="space-y-3">
+          <div>
+            <div class="text-sm text-war-text font-medium mb-1">Titan Construction Services LLC</div>
+            <div class="text-xs text-war-text-muted space-y-0.5">
+              <div class="flex justify-between"><span>Mobilization and protection</span><span class="font-mono">$5,000</span></div>
+              <div class="flex justify-between"><span>Sidewalk bridge installation</span><span class="font-mono">$12,750</span></div>
+              <div class="flex justify-between"><span>Pipe scaffolding and hoist/stair tower</span><span class="font-mono">$15,000</span></div>
+              <div class="flex justify-between"><span>Remove plants and soil</span><span class="font-mono">$10,000</span></div>
+              <div class="flex justify-between"><span>Demolish concrete planter boxes &amp; pavers</span><span class="font-mono">$25,000</span></div>
+              <div class="flex justify-between"><span>Temporary waterproofing (2 men, 3 days)</span><span class="font-mono">$7,500</span></div>
+              <div class="flex justify-between border-t border-war-border pt-1 mt-1"><span class="text-war-text font-medium">Total (Lump Sum)</span><span class="font-mono text-war-amber">$82,022</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="text-sm text-war-text font-medium mb-1">Fort Cica</div>
+            <div class="text-xs text-war-text-muted">
+              <div class="flex justify-between"><span>Inspect EPDM roof membrane &amp; patch (2 men, 2 days)</span><span class="font-mono">$5,900</span></div>
+              <div><span>Alternate: $225/hour per 2 workmen for additional days</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card space-y-3 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Comprehensive Roof Project (August 2023)</div>
+        <div class="text-xs text-war-text-muted space-y-0.5">
+          <div class="flex justify-between"><span>Asbestos abatement (CPC)</span><span class="font-mono">$29,800</span></div>
+          <div class="flex justify-between"><span>Roof works</span><span class="font-mono">$124,499</span></div>
+          <div class="flex justify-between"><span>Insurance (5%)</span><span class="font-mono">$7,715</span></div>
+          <div class="flex justify-between"><span>Profit (10%) &amp; Overhead (2%)</span><span class="font-mono">$19,442</span></div>
+          <div class="flex justify-between border-t border-war-border pt-1 mt-1"><span class="text-war-text font-medium text-sm">Total (without Contingency)</span><span class="font-mono text-war-amber text-sm">$181,455</span></div>
+        </div>
+      </div>
+
+      <div class="card border-l-2 border-war-amber">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-3">Payments &amp; Balances (Jan 29, 2024)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="table-header">Vendor</th>
+                <th class="table-header text-right">Contract</th>
+                <th class="table-header text-right">Paid</th>
+                <th class="table-header text-right">Unpaid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-cell text-war-text">GKM Industries Inc</td>
+                <td class="table-cell text-right font-mono">$29,800</td>
+                <td class="table-cell text-right font-mono text-war-green">$11,920</td>
+                <td class="table-cell text-right font-mono text-war-red">$17,880</td>
+              </tr>
+              <tr>
+                <td class="table-cell text-war-text">HD Contractors Corp</td>
+                <td class="table-cell text-right font-mono">$55,550</td>
+                <td class="table-cell text-right font-mono text-war-green">$20,650</td>
+                <td class="table-cell text-right font-mono text-war-red">$29,750</td>
+              </tr>
+              <tr>
+                <td class="table-cell text-war-text">Rhini Solutions LLC</td>
+                <td class="table-cell text-right font-mono">$4,575</td>
+                <td class="table-cell text-right font-mono text-war-green">$2,300</td>
+                <td class="table-cell text-right font-mono text-war-red">$2,275</td>
+              </tr>
+              <tr>
+                <td class="table-cell text-war-text">Cara Plumbing Inc</td>
+                <td class="table-cell text-right font-mono">$480</td>
+                <td class="table-cell text-right font-mono">—</td>
+                <td class="table-cell text-right font-mono text-war-red">$480</td>
+              </tr>
+              <tr>
+                <td class="table-cell text-war-text">Foundations</td>
+                <td class="table-cell text-right font-mono">$26,813</td>
+                <td class="table-cell text-right font-mono">—</td>
+                <td class="table-cell text-right font-mono text-war-red">$26,813</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SLIDE 29: Project Report Continued ===================== -->
+    <section id="s29" data-slide="29" class="py-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xxs text-war-text-muted">29</span>
+        <h2 class="section-title">Roof Repair Project Report — Phase Summary</h2>
+      </div>
+
+      <div class="card space-y-4 mb-4">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest">Project Summary</div>
+        <div class="text-sm text-war-text-dim space-y-1">
+          <div><span class="text-war-text font-medium">Project:</span> 13 Harrison Street Roof Work</div>
+          <div><span class="text-war-text font-medium">Location:</span> 13 Harrison St, Manhattan, NY</div>
+          <div><span class="text-war-text font-medium">Owner:</span> 13 Harrison Street Condominium (c/o ERPM Co)</div>
+          <div><span class="text-war-text font-medium">CM:</span> Foundations Group (Foundations Interior Design Corp.)</div>
+        </div>
+        <p class="text-sm text-war-text-dim">An Asbestos Assessment (ACP5) filed February 2022 confirmed ACM in roofing areas. In October 2022, HD Contractors Corp provided proposals for permanent roof replacement. In August 2023, Foundations Group estimated total project cost at $181,455.</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div class="card border-l-2 border-war-green">
+          <div class="font-mono text-xxs text-war-green uppercase tracking-widest mb-3">Phase 1: Temporary Roof (Completed)</div>
+          <ul class="text-sm text-war-text-dim space-y-1">
+            <li><span class="text-war-text">Asbestos Abatement</span> — GKM Industries</li>
+            <li><span class="text-war-text">Air Monitoring</span> — RHINI Solutions</li>
+            <li><span class="text-war-text">Temporary Roofing</span> — HD Contractors (Siplast membrane)</li>
+            <li><span class="text-war-text">Decking Installation</span> — HD (¾" plywood change order)</li>
+            <li><span class="text-war-text">Ancillary Repairs</span> — Chimney, steel beams, stucco, caulking, painting</li>
+            <li><span class="text-war-text">Plumbing</span> — Cara Plumbing (drain adjustment)</li>
+          </ul>
+        </div>
+        <div class="card border-l-2 border-war-red">
+          <div class="font-mono text-xxs text-war-red uppercase tracking-widest mb-3">Phase 2: Permanent Roof (Pending)</div>
+          <p class="text-sm text-war-text-dim">The installation of the permanent roofing system remains outstanding. Planned for spring installation.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="font-mono text-xxs text-war-amber uppercase tracking-widest mb-3">Phase 1 Budget — Total: $117,217.33</div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="table-header">Vendor/Item</th>
+                <th class="table-header">Scope</th>
+                <th class="table-header text-right">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-war-border/30">
+                <td class="table-cell text-war-text font-medium" colspan="2">Trade Costs &amp; Materials</td>
+                <td class="table-cell text-right font-mono text-war-amber">$90,872</td>
+              </tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">HD Contractors Corp</td><td class="table-cell text-war-text-muted">Temp Roof &amp; Repairs (Base)</td><td class="table-cell text-right font-mono">$41,300</td></tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">HD Contractors Corp</td><td class="table-cell text-war-text-muted">Wood Decking (CO)</td><td class="table-cell text-right font-mono">$14,250</td></tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">GKM Industries Inc</td><td class="table-cell text-war-text-muted">Asbestos Abatement</td><td class="table-cell text-right font-mono">$29,800</td></tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">RHINI Solutions LLC</td><td class="table-cell text-war-text-muted">Air Monitoring</td><td class="table-cell text-right font-mono">$4,575</td></tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">Cara Plumbing Inc</td><td class="table-cell text-war-text-muted">Drain Relocation</td><td class="table-cell text-right font-mono">$480</td></tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">Materials</td><td class="table-cell text-war-text-muted">Lumber, Paint, Supplies</td><td class="table-cell text-right font-mono">$467</td></tr>
+              <tr class="border-b border-war-border/30">
+                <td class="table-cell text-war-text font-medium" colspan="2">Foundations CM Costs &amp; Fees</td>
+                <td class="table-cell text-right font-mono text-war-amber">$26,346</td>
+              </tr>
+              <tr><td class="table-cell text-war-text-dim pl-6">Direct Labor</td><td class="table-cell text-war-text-muted">Laborers &amp; Carpenters</td><td class="table-cell text-right font-mono">$3,943</td></tr>
+              <tr class="border-t-2 border-war-amber/30">
+                <td class="table-cell font-medium text-war-text text-lg" colspan="2">Total Phase 1</td>
+                <td class="table-cell text-right font-mono text-war-red text-lg font-semibold">$117,217</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="border-t border-war-border mt-8 pt-6 pb-12 text-center">
+      <div class="font-mono text-xxs text-war-red/60 uppercase tracking-[0.3em]">
+        Confidential &mdash; Attorney Work Product &mdash; Prepared in Anticipation of Litigation
+      </div>
+      <div class="font-mono text-xxs text-war-text-muted mt-2">
+        13 Harrison Street, New York, NY 10013
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

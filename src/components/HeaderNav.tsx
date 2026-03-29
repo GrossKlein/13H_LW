@@ -5,6 +5,8 @@ import {
   Users,
   Briefcase,
   ShareNetwork,
+  Warning,
+  Drop,
 } from '@phosphor-icons/react';
 
 interface NavItem {
@@ -26,23 +28,32 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; weight?: 'reg
   users: Users,
   briefcase: Briefcase,
   'share-2': ShareNetwork,
+  'warning': Warning,
+  'drop': Drop,
 };
 
 const HeaderNav = ({ items, activeNav }: HeaderNavProps) => {
   return (
     <nav className="flex items-center gap-1">
-      {items.map((item) => {
+      {items.map((item, index) => {
         const Icon = iconMap[item.icon];
         const isActive = activeNav === item.id;
+        // Insert separator before "Evidence" group
+        const showSeparator = item.id === 'harassment';
         return (
-          <a
-            key={item.id}
-            href={item.href}
-            className={`nav-link ${isActive ? 'active' : ''}`}
-          >
-            {Icon && <Icon size={14} weight={isActive ? 'bold' : 'regular'} />}
-            <span>{item.label}</span>
-          </a>
+          <>
+            {showSeparator && (
+              <span key="sep" className="mx-2 h-4 w-px bg-war-border-hi inline-block" />
+            )}
+            <a
+              key={item.id}
+              href={item.href}
+              className={`nav-link ${isActive ? 'active' : ''}`}
+            >
+              {Icon && <Icon size={14} weight={isActive ? 'bold' : 'regular'} />}
+              <span>{item.label}</span>
+            </a>
+          </>
         );
       })}
     </nav>
